@@ -15,7 +15,7 @@ export const Listings = () => {
           <div>
             <h4 className="text-2xl font-bold mb-5">Founders & SMEs</h4>
             <p className="text-base mb-2">
-              AI builds your first plan free. Upgrade when you're ready.
+              AI builds your first plan free. Upgrade when you&apos;re ready.
             </p>
             <p className="text-base">
               For leaders who need forecasts, execution tools, and team

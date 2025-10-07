@@ -1,8 +1,5 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Button } from "@/components/ui/button";
-
 import { IoIosArrowForward } from "react-icons/io";
 
 import Link from "next/link";
@@ -15,7 +12,6 @@ type Plan = {
 };
 
 export default function PricingDetail() {
-  const [annual, setAnnual] = useState(false);
 
   const plans: Plan[] = [
     {

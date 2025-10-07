@@ -11,7 +11,7 @@ export const ListingsSupport = () => {
             Need Support?
           </h2>
           <p className="mt-5 text-base leading-loose text-gray-600 max-w-xl mb-10">
-            Whether you're building your first business plan or leading a
+            Whether you&apos;re building your first business plan or leading a
             crossfunctional team, Plan Genie gets you moving fast.
           </p>
           <div className="flex items-center gap-3">

@@ -5,7 +5,7 @@ export default function AboutHero() {
     <div className="bg-primary pt-40 md:pt-52 pb-16 md:pb-24 text-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
         <div className="flex flex-col items-center text-center gap-4">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold font-manrope leading-[1.3] tracking-tight mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold font-manrope leading-[1.3] tracking-tight mb-5 w-[80%]">
             Behind Every <span className="text-accent">Great Plan</span> Is a
             Clear Purpose
           </h1>

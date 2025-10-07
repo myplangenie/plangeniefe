@@ -33,7 +33,7 @@ export default function FeaturedArticles() {
         Featured Blog Articles
       </h2>
       <p className="text-base opacity-70 mt-1">
-        Here's what we've been up to recently.
+        Here&apos;s what we&apos;ve been up to recently.
       </p>
 
       <div className="relative mt-14">

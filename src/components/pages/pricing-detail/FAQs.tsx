@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 export default function PricingFAQ() {
   return (
     <section className="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-12 md:mt-20">

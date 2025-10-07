@@ -3,9 +3,9 @@ import Navigation from "./nav";
 
 interface LayoutProps {
   children: React.ReactNode;
-  title?: String;
-  desc?: String;
-  page?: String;
+  title?: string;
+  desc?: string;
+  page?: string;
 }
 
 export default function DisplayLayout({ children, title, desc, page }: LayoutProps) {

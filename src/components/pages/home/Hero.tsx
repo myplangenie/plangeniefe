@@ -15,7 +15,7 @@ export default function HomeHero() {
   return (
     <header className="bg-primary pt-32 sm:pt-40 md:pt-52 pb-40 sm:pb-20 md:pb-24 text-white">
       <div className="flex flex-col-reverse md:grid md:grid-cols-[1.2fr_1fr] gap-10 md:gap-14 px-5 sm:px-10 md:px-20">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2 md:gap-4">
           <ul className="hidden text-xs sm:text-sm opacity-80 mb-5 md:flex gap-4 flex-wrap">
             <li className="flex items-center font-manrope font-bold text-sm gap-2">
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
@@ -36,7 +36,7 @@ export default function HomeHero() {
               Trusted by top business coaches
             </li>
           </ul>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold font-manrope !leading-[1.6] md:leading-[1.1] mb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold font-manrope !leading-[1.6] md:!leading-[1.1] md:mb-2">
             Plan Smarter. <span className="text-accent">Grow Faster.</span> Lead
             With Clarity.
           </h1>

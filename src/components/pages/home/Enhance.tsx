@@ -48,7 +48,7 @@ export default function Enhance() {
         <h3 className="text-3xl md:text-4xl mb-3 font-bold leading-[1.3] md:w-[60%]">
           Enhance & scale your business experience
         </h3>
-        <p className="text-base mb-3 leading-loose w-full md:w-[78%] max-w-[572px]">
+        <p className="text-sm md:text-base mb-3 leading-loose w-full md:w-[78%] max-w-[572px]">
           Whether you are launching a startup, coaching businesses, leading a
           team, Plan Genie is designed to work the way you think.
         </p>
@@ -57,16 +57,16 @@ export default function Enhance() {
             <div key={idx}>
               <button
                 type="button"
-                className="w-full flex items-start gap-4 py-4 md:py-5 cursor-pointer text-left"
+                className="w-full flex items-start gap-1 md:gap-4 py-4 md:py-5 cursor-pointer text-left"
                 aria-expanded={openIndex === idx}
                 onClick={() => toggle(idx)}
               >
                 {openIndex === idx ? (
-                  <IoIosArrowUp className="text-2xl shrink-0 mt-0.5" />
+                  <IoIosArrowUp className="text-xl md:text-2xl shrink-0 mt-0.5" />
                 ) : (
-                  <IoIosArrowDown className="text-2xl shrink-0 mt-0.5" />
+                  <IoIosArrowDown className="text-xl md:text-2xl shrink-0 mt-0.5" />
                 )}
-                <h5 className="font-manrope font-black text-base">
+                <h5 className="font-manrope md:font-black text-sm md:text-base">
                   {item.title}
                 </h5>
               </button>

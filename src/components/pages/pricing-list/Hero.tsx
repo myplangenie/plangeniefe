@@ -1,5 +1,3 @@
-import { FaCheck } from "react-icons/fa6";
-
 export default function ListHero() {
   return (
     <div className="bg-primary pt-40 md:pt-52 pb-16 md:pb-24 text-white">
@@ -9,7 +7,7 @@ export default function ListHero() {
             Ready to <span className="text-accent">Plan</span>? Let&apos;s Make It Happen
           </h1>
           <p className="text-base sm:text-lg opacity-80 font-manrope max-w-2xl leading-loose">
-            Whether you're building your first business plan or leading a cross functional team, Plan Genie gets you moving fast.
+            Whether you&apos;re building your first business plan or leading a cross functional team, Plan Genie gets you moving fast.
           </p>
         </div>
       </div>
