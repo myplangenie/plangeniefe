@@ -99,7 +99,7 @@ export default function PricingSect() {
     <section className="px-5 sm:px-10 md:px-20 mx-auto w-full mt-10 sm:mt-12">
       {/* Billing toggle */}
       <div className="relative w-max mx-auto mb-10 sm:mb-16 mt-10 sm:mt-20">
-        <div className="bg-accent rounded-full p-1 flex items-center gap-1 relative select-none">
+        <div className="bg-accent rounded-full !p-1 flex items-center gap-1 relative select-none">
           {/* slider */}
           <div
             className={`absolute top-1 bottom-1 left-1 w-1/2 rounded-full bg-white transition-transform duration-300 ${
@@ -128,7 +128,7 @@ export default function PricingSect() {
           </button>
         </div>
         <div className="text-center text-xs text-gray-500 mt-2">
-          {annual ? "Billed annually — 2 months free" : "Switch to Yearly and get 2 months free"}
+          {/* {annual ? "Billed annually — 2 months free" : "Switch to Yearly and get 2 months free"} */}
         </div>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-2">

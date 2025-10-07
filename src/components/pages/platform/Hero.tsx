@@ -7,7 +7,7 @@ const PlatformHero = () => {
   return (
     <header className="bg-primary pt-40 md:pt-52 pb-16 md:pb-36 text-white">
       <div className="max-w-[1200px] mx-auto text-center w-full md:w-[90%] px-5 sm:px-10">
-        <ul className="text-xs sm:text-sm opacity-80 mb-5 flex gap-4 flex-wrap w-max mx-auto">
+        <ul className="text-xs sm:text-sm opacity-80 mb-5 hidden md:flex gap-4 flex-wrap w-max mx-auto">
           <li className="flex items-center font-manrope font-bold text-sm gap-2">
             <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
               <FaCheck className="text-[10px] text-accent" />
@@ -27,7 +27,7 @@ const PlatformHero = () => {
             Trusted by top business coaches
           </li>
         </ul>
-        <h2 className="text-3xl sm:text-4xl md:text-6xl font-manrope leading-[1.3] font-black mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-manrope !leading-[1.3] font-black mb-6">
           The Only <span className="text-accent">Planning System</span> That
           Thinks With You
         </h2>

@@ -13,7 +13,7 @@ export default function AboutStory() {
     <div className="py-16 md:py-24 text-black">
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
         <div className="text-center">
-          <h4 className="text-3xl sm:text-4xl md:text-4xl font-extrabold font-manrope tracking-tight mb-4">
+          <h4 className="text-2xl sm:text-4xl md:text-4xl font-extrabold font-manrope tracking-tight mb-1 md:mb-4">
             Our Origin Story
           </h4>
           <p className="text-base sm:text-lg opacity-70 font-manrope max-w-3xl mx-auto leading-loose">
@@ -62,7 +62,7 @@ export default function AboutStory() {
         <div className="bg-[#F8FBFF] px-6 sm:px-10 md:px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-12 md:py-20 rounded-[26px]">
           <div>
             <Image src={Thumb} alt="thumb" quality={100} width={100} height={100} className="w-[40px] h-[35px] object-cover object-center mb-10" />
-            <h3 className="text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
+            <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
               Clarity
             </h3>
             <p className="text-base leading-normal text-[#1D2130]">
@@ -71,7 +71,7 @@ export default function AboutStory() {
           </div>
           <div>
             <Image src={Ticket} alt="thumb" quality={100} width={100} height={100} className="w-[40px] h-[35px] object-cover object-center mb-10" />
-            <h3 className="text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
+            <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
               Simplicity
             </h3>
             <p className="text-base leading-normal text-[#1D2130]">
@@ -80,7 +80,7 @@ export default function AboutStory() {
           </div>
           <div>
             <Image src={Percent} alt="thumb" quality={100} width={100} height={100} className="w-[40px] h-[35px] object-cover object-center mb-10" />
-            <h3 className="text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
+            <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
               Equity
             </h3>
             <p className="text-base leading-normal text-[#1D2130]">
@@ -89,7 +89,7 @@ export default function AboutStory() {
           </div>
           <div>
             <Image src={Doc} alt="thumb" quality={100} width={100} height={100} className="w-[40px] h-[35px] object-cover object-center mb-10" />
-            <h3 className="text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
+            <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
               Integrity
             </h3>
             <p className="text-base leading-normal text-[#1D2130]">

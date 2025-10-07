@@ -6,7 +6,7 @@ export default function PricingFAQ() {
       <h2 className="text-xl md:text-4xl font-bold text-gray-900 text-center">
         Frequently Asked Questions
       </h2>
-      <div className="mt-14 divide-y rounded-lg border bg-white">
+      <div className="mt-7 md:mt-14 divide-y rounded-lg border bg-white">
         {[
           {
             q: "Q. Can I change plans anytime?",

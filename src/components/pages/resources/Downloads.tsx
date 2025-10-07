@@ -18,8 +18,8 @@ export default function TopDownloads() {
   ];
   return (
     <section className="max-w-[1400px] mx-auto px-5 sm:px-10 md:px-20 py-20 font-manrope">
-      <h2 className="text-3xl mb-5 font-semibold text-[#12141D]">Top Downloadables</h2>
-      <p className="text-base opacity-70 mt-1">Here&apos;s what we&apos;ve been up to recently.</p>
+      <h2 className="text-2xl md:text-3xl mb-5 font-semibold text-[#12141D]">Top Downloadables</h2>
+      <p className="text-sm md:text-base opacity-70 mt-1">Here&apos;s what we&apos;ve been up to recently.</p>
       <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((card, i) => (
           <article
@@ -27,7 +27,7 @@ export default function TopDownloads() {
             className="relative rounded-xl overflow-hidden shadow-sm ring-1 ring-black/5 bg-white"
           >
             <div
-              className={`w-full aspect-[4/3] md:aspect-[4/5] bg-gradient-to-br ${card.gradient} opacity-90`} />
+              className={`w-full aspect-[4/4] md:aspect-[4/5] bg-gradient-to-br ${card.gradient} opacity-90`} />
             <div className="absolute inset-0 p-4 sm:p-6 md:p-8 pb-10 flex flex-col justify-end">
               <h3 className="text-white text-xl sm:text-2xl max-w-[90%] mb-2 sm:mb-4 font-semibold drop-shadow">{card.title}</h3>
               <p className="text-white/80 text-sm sm:text-base">{card.meta}</p>

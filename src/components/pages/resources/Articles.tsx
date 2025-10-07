@@ -29,14 +29,14 @@ export default function FeaturedArticles() {
 
   return (
     <section className="max-w-[1400px] mx-auto py-1 font-manrope mt-20 px-5 sm:px-10 md:px-20">
-      <h2 className="text-3xl font-bold text-[#12141D] mb-5">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#12141D] mb-2 md:mb-5">
         Featured Blog Articles
       </h2>
       <p className="text-base opacity-70 mt-1">
         Here&apos;s what we&apos;ve been up to recently.
       </p>
 
-      <div className="relative mt-14">
+      <div className="relative mt-7 md:mt-14">
         <div className="overflow-visible grid md:grid-cols-[1.2fr_1fr] gap-8 rounded-2xl items-center border-2 border-solid border-[#E5EAF4]">
           {/* Left image panel */}
           <div className="relative overflow-visible shadow-sm">
@@ -51,11 +51,11 @@ export default function FeaturedArticles() {
           </div>
 
           {/* Right content card */}
-          <article className="relative p-7 md:p-10 h-max">
+          <article className="relative p-4 md:p-10 h-max">
             <span className="inline-block text-[10px] tracking-wide font-semibold bg-[#EAF2FF] text-[#1D4374] px-3 py-1 rounded-full mb-6">
               FEATURED
             </span>
-            <h3 className="text-[26px] sm:text-3xl md:text-3xl font-extrabold leading-relaxed text-[#17324F]">
+            <h3 className="text-2xl sm:text-2xl md:text-3xl font-extrabold leading-relaxed text-[#17324F]">
               {current.title}
             </h3>
             <div className="mt-10 flex items-center justify-between">

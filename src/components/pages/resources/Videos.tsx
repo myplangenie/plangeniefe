@@ -50,11 +50,11 @@ function SecVideoCard({ label }: { label?: string }) {
 export default function VideoTutorials() {
   return (
     <section className="max-w-[1400px] mx-auto px-5 sm:px-10 md:px-20 py-6 font-manrope">
-      <h2 className="text-3xl mb-5 font-semibold text-[#12141D]">Video Tutorials</h2>
-      <p className="text-base w-[40%] leading-loose opacity-70 mt-1">We share common trends, strategies ideas, opinions, short & long stories from the team behind company.</p>
+      <h2 className="text-2xl md:text-3xl mb-2 md:mb-5 font-semibold text-[#12141D]">Video Tutorials</h2>
+      <p className="text-base md:w-[40%] leading-loose opacity-70 mt-1">We share common trends, strategies ideas, opinions, short & long stories from the team behind company.</p>
 
       <div className="mt-7 grid gap-5">
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-10">
           <VideoCard label="FEATURED" />
           <VideoCard label="FEATURED" />
         </div>
