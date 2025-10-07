@@ -59,8 +59,8 @@ export default function PricingDetail() {
   ];
 
   return (
-    <section className="px-5 sm:px-10 md:px-20 mx-auto w-full pt-14 sm:pt-20 pb-14 sm:pb-20 bg-[#F8F9FC] font-manrope">
-      <h3 className="text-4xl font-black text-[#12141D] text-center mb-16 font-manrope">
+    <section className="px-5 sm:px-10 md:px-20 mx-auto w-full pt-20 sm:pt-20 pb-14 sm:pb-20 bg-[#F8F9FC] font-manrope">
+      <h3 className="text-2xl md:text-4xl font-black text-[#12141D] text-center mb-6 md:mb-16 font-manrope">
         Detailed Use Case Grid
       </h3>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
@@ -70,7 +70,7 @@ export default function PricingDetail() {
             <div className="p-3 sm:p-10">
               <div className="flex items-baseline justify-between">
                 <h3
-                  className={`text-xl font-semibold mb-2 ${
+                  className={`text-lg md:text-xl font-semibold mb-2 ${
                     plan.name === "Prime" ? "text-white" : "text-black"
                   }`}
                 >
@@ -78,7 +78,7 @@ export default function PricingDetail() {
                 </h3>
               </div>
 
-              <ul className="mt-4 space-y-8 text-sm">
+              <ul className="mt-4 space-y-4 md:space-y-8 text-sm">
                 <li className="flex items-start font-manrope text-base gap-5 leading-loose">
                   <div>
                     <div className="size-[22px] bg-[#5198F3] rounded-full"></div>

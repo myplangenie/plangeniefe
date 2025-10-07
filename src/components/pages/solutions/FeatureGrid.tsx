@@ -42,7 +42,7 @@ export default function FeatureGrid() {
   return (
     <section className="px-5 sm:px-10 md:px-20 my-20 font-manrope">
       <div className="overflow-x-auto">
-        <h3 className="text-4xl font-black text-[#12141D] text-center mb-16 font-manrope">
+        <h3 className="text-2xl md:text-4xl font-black text-[#12141D] text-center mb-6 md:mb-16 font-manrope">
           Detailed Use Case Grid
         </h3>
         <table className="w-full min-w-[760px] bg-white rounded-2xl shadow-xl ring-1 ring-black/5 overflow-hidden">

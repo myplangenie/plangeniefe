@@ -25,7 +25,7 @@ export default function SiteHero() {
               Trusted by top business coaches
             </li>
           </ul>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold font-manrope tracking-tight mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold font-manrope !leading-[1.3] tracking-tight mb-1 md:mb-5">
             One Platform. <span className="text-accent">Many</span> Use Cases.
           </h1>
           <p className="text-base sm:text-xl opacity-70 font-manrope leading-relaxed w-full md:w-[50%]">

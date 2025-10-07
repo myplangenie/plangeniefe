@@ -13,7 +13,7 @@ export const Listings = () => {
       <div className="mt-12 md:mt-20 px-0 md:px-10 space-y-10 md:space-y-12 font-manrope">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 border-b border-solid border-black pb-8 md:pb-12">
           <div>
-            <h4 className="text-2xl font-bold mb-5">Founders & SMEs</h4>
+            <h4 className="text-xl md:text-2xl font-bold mb-5">Founders & SMEs</h4>
             <p className="text-base mb-2">
               AI builds your first plan free. Upgrade when you&apos;re ready.
             </p>
@@ -29,7 +29,7 @@ export const Listings = () => {
         </div>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 border-b border-solid border-black pb-8 md:pb-12">
           <div>
-            <h4 className="text-2xl font-bold mb-5">Coaches & Consultants</h4>
+            <h4 className="text-xl md:text-2xl font-bold mb-5">Coaches & Consultants</h4>
             <p className="text-base mb-2">
               Use Plan Genie in your client work. Templates, training, and more.
             </p>
@@ -42,7 +42,7 @@ export const Listings = () => {
         </div>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 border-b border-solid border-black pb-8 md:pb-12">
           <div>
-            <h4 className="text-2xl font-bold mb-5">Nonprofits & SPOs</h4>
+            <h4 className="text-xl md:text-2xl font-bold mb-5">Nonprofits & SPOs</h4>
             <p className="text-base mb-2 w-[90%]">
               Frameworks for grant writing, impact tracking, and long-term
               strategy.
@@ -56,7 +56,7 @@ export const Listings = () => {
         </div>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 border-b border-solid border-black pb-8 md:pb-12">
           <div>
-            <h4 className="text-2xl font-bold mb-5">Educational Partners</h4>
+            <h4 className="text-xl md:text-2xl font-bold mb-5">Educational Partners</h4>
             <p className="text-base mb-2">
               Bring Plan Genie into your curriculum or accelerator.
             </p>
@@ -69,7 +69,7 @@ export const Listings = () => {
         </div>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 border-b border-solid border-black pb-8 md:pb-12">
           <div>
-            <h4 className="text-2xl font-bold mb-5">Life Planners</h4>
+            <h4 className="text-xl md:text-2xl font-bold mb-5">Life Planners</h4>
             <p className="text-base mb-2">
               For those seeking focus in career, health, finances, and
               relationships
