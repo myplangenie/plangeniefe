@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import SiteHero from "@/components/pages/pricing-detail/Hero";
 import DisplayLayout from "@/components/layout/displayLayout";
 import PricingSect from "@/components/pages/pricing-detail/Detail";
@@ -18,3 +17,10 @@ export default function SolutionsPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Solutions — Use cases and how we help",
+  description:
+    "Explore how Plan Genie supports founders, nonprofits, consultants, and teams with AI planning and facilitation.",
+  alternates: { canonical: "/solutions" },
+};

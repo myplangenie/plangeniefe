@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import DisplayLayout from "@/components/layout/displayLayout";
 import Testimonials from "@/components/pages/about/Testimonial";
 import Enhance from "@/components/pages/home/Enhance";
@@ -21,3 +22,21 @@ export default function Home() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Plan smarter. Grow faster.",
+  description:
+    "Plan Genie combines AI planning, training, and execution tools to help teams move from strategy to action.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Plan smarter. Grow faster.",
+    images: [
+      {
+        url: "/images/hero.svg",
+        width: 1200,
+        height: 630,
+        alt: "Plan Genie hero",
+      },
+    ],
+  },
+};

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import DisplayLayout from "@/components/layout/displayLayout";
 import ResourcesHero from "@/components/pages/resources/Hero";
 import TopDownloads from "@/components/pages/resources/Downloads";
@@ -21,3 +22,10 @@ export default function ResourcesPage() {
     </DisplayLayout>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Resources — templates, videos, and articles",
+  description:
+    "Free templates, tutorials, and articles to power your planning journey with Plan Genie.",
+  alternates: { canonical: "/resources" },
+};

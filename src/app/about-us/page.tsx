@@ -1,5 +1,4 @@
-"use client";
-
+import type { Metadata } from "next";
 import DisplayLayout from "@/components/layout/displayLayout";
 import PricingFAQ from "@/components/pages/pricing/FAQs";
 import AboutHero from "@/components/pages/about/Hero";
@@ -23,3 +22,10 @@ export default function AboutUsPage() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "About — Purpose, story, and team",
+  description:
+    "Learn about Plan Genie’s mission and the team behind our planning methodology and platform.",
+  alternates: { canonical: "/about-us" },
+};
