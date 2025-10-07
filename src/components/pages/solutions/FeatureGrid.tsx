@@ -38,6 +38,7 @@ const rows: { feature: string; values: Cell[] }[] = [
   },
 ];
 
+
 export default function FeatureGrid() {
   return (
     <section className="px-5 sm:px-10 md:px-20 my-20 font-manrope">
