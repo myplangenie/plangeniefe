@@ -28,8 +28,8 @@ export default function AboutStory() {
       <div className="max-w-[1440px] px-5 sm:px-10 md:px-20 mx-auto mt-12 md:mt-20 font-manrope">
         <div className="bg-[#FAFAFA] px-6 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 py-12 md:py-20 rounded-[18px]">
           <div>
-            <h5 className="text-accent mb-5 font-bold">Our Goals</h5>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-manrope text-[#1D2130] mb-4 leading-tight md:w-[85%]">
+            <h5 className="text-2xl sm:text-3xl md:text-4xl text-accent mb-5 font-bold">Our Goals</h5>
+            <h3 className="text-2xl md:text-3xl font-extrabold font-manrope text-[#1D2130] mb-4 leading-tight md:w-[85%]">
               To upscale your business to the next level
             </h3>
             <p className="text-base leading-loose text-[#6D6E76]">
@@ -39,10 +39,14 @@ export default function AboutStory() {
             </p>
           </div>
           <div>
-            <h5 className="text-accent mb-5 font-bold">Our Vision</h5>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-manrope text-[#1D2130] mb-4 leading-tight">
+            <h5 className="text-2xl sm:text-3xl md:text-4xl text-accent mb-5 font-bold">Our Vision</h5>
+            <h3 className="text-2xl md:text-3xl font-extrabold font-manrope text-[#1D2130] mb-4 leading-tight md:w-[85%]">
               To provide solutions for growing companies
             </h3>
+            {/* <h5 className="text-accent mb-5 font-bold">Our Vision</h5>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-manrope text-[#1D2130] mb-4 leading-tight">
+              To provide solutions for growing companies
+            </h3> */}
             <p className="text-base leading-loose text-[#6D6E76]">
               Plan Genie is a full ecosystem. From AI-generated business plans
               to live planning sessions, we bring together the thinking, tools,
