@@ -15,7 +15,7 @@ const Platform = () => {
       <PlatformPillars />
       <PricingSect />
       <Ad />
-      <PlatformCarousel />
+      {/* <PlatformCarousel /> */}
       <Testimonials />
     </DisplayLayout>
   );

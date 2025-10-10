@@ -33,12 +33,12 @@ const PlatformCarousel = () => {
   ];
   return (
     <section className="font-manrope pt-16 md:pt-24 pb-10 md:pb-14 px-5 sm:px-10 md:px-20">
-      {/* <div>
+      <div>
         <h3 className="text-3xl text-center mb-10 font- font-bold">
           Embedded Training Carousel
         </h3>
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1290px] mx-auto">
           {pillarBox?.map((pillar, index) => (
             <div className="" key={index}>
@@ -57,8 +57,8 @@ const PlatformCarousel = () => {
             </div>
           ))}
         </div>
-      </div> */}
-      <div className="">
+      </div>
+      <div className="mt-20 md:mt-36">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
           <div className="bg-[#12141D] w-full h-[20rem] md:h-full rounded-[10px]"></div>
           <div className="">

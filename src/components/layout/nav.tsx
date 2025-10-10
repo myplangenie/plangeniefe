@@ -27,7 +27,7 @@ const Navigation = () => {
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
   const linkClasses = (href: string) =>
-    `${linkBase}${isActive(href) ? " text-accent" : linkColor}`;
+    `!text-[15px] ${linkBase}${isActive(href) ? " text-accent" : linkColor}`;
 
   return (
     <nav
@@ -45,13 +45,13 @@ const Navigation = () => {
             width={1000}
             height={1000}
             quality={100}
-            className="w-[230px] h-auto max-w-[140px] object-contain"
+            className="w-[160px] h-auto max-w-[160px] object-cover object-center"
           />
         </Link>
       </div>
       {/* Desktop nav */}
       <div className="hidden md:block">
-        <ul className="flex items-center gap-10">
+        <ul className="flex items-center gap-10 text-[15px]">
           <li>
             <Link
               href="/platform"
@@ -102,7 +102,7 @@ const Navigation = () => {
       <div className="hidden md:block">
         <Link
           href="/demo"
-          className="font-manrope font-medium text-white text-sm hover:text-accent mr-6 bg-accent px-7 py-3 rounded-[8px]"
+          className="font-manrope font-medium text-white text-sm hover:text-accent mr-6 bg-accent px-8 py-4 rounded-[8px]"
         >
           Request Demo
         </Link>
