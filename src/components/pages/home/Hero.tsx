@@ -120,16 +120,16 @@ export default function HomeHero() {
                 src={_1Img}
                 alt="alt main"
                 quality={100}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-full h-auto"
               />
               <Image
                 src={MarkImg}
                 alt="alt main"
                 quality={100}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-[30px] h-auto absolute -top-6 -left-5 hero-deco"
               />
             </div>
@@ -138,16 +138,16 @@ export default function HomeHero() {
                 src={_2Img}
                 alt="alt main"
                 quality={100}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-full h-auto -mt-12"
               />
               <Image
                 src={ArrowImg}
                 alt="alt main"
                 quality={100}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="absolute bottom-0 w-full hero-deco"
               />
             </div>
@@ -156,8 +156,8 @@ export default function HomeHero() {
                 src={_3Img}
                 alt="alt main"
                 quality={100}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-full h-auto"
               />
             </div>
@@ -166,8 +166,8 @@ export default function HomeHero() {
                 src={_4Img}
                 alt="alt main"
                 quality={100}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className="w-full h-auto -mt-12"
               />
               <div className="absolute -bottom-5 w-full">
@@ -175,8 +175,8 @@ export default function HomeHero() {
                   src={FlowerImg}
                   alt="alt main"
                   quality={100}
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className="w-[70px] mx-auto block hero-deco"
                 />
               </div>
@@ -187,8 +187,8 @@ export default function HomeHero() {
               src={CurveImg}
               alt="alt main"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-full h- [40rem] mx-auto block"
             />
           </div>
