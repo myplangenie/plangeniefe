@@ -1,21 +1,27 @@
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa6";
 
-import AdImg from "@/images/ad.svg";
+import AdImg from "@/images/enterprise.png";
 
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
 import EnterpriseImg from "../home/EnhanceImg";
 
-
 export default function Ad() {
   return (
     <div className="bg-[#F3F8FF] py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-10">
       <div>
-        <EnterpriseImg />
+        <Image
+          src={AdImg}
+          alt="people in an office"
+          quality={100}
+          width={1000}
+          height={1000}
+          className="w-full h-auto !rounded-lg"
+        />
       </div>
       <div className="font-manrope">
-        <h3 className="text-3xl sm:text-4xl mb-5 font-bold leading-snug">
+        <h3 className="text-2xl md:text-4xl mb-5 font-bold leading-snug">
           Enterprise Plan — <br /> Comprehensive & Customizable
         </h3>
         <p className="text-base mb-7 leading-loose w-full md:w-[95%] max-w-[572px]">
@@ -46,8 +52,18 @@ export default function Ad() {
           </li>
         </ul>
         <div className="flex gap-2 items-center flex-wrap">
-            <Link href="/pricing" className="bg-accent flex items-center gap-1 border border-solid py-3 text-white font-bold px-6 text-sm rounded-[8px] border-accent">See Pricing <IoArrowForward className="text-xl" /></Link>
-            <Link href="/demo" className="bg-transparent border border-solid py-3 font-bold px-6 text-sm rounded-[8px] border-primary text-primary">Book a Demo</Link>
+          <Link
+            href="/pricing"
+            className="bg-accent flex items-center gap-1 border border-solid py-3 text-white font-bold px-6 text-sm rounded-[8px] border-accent"
+          >
+            See Pricing <IoArrowForward className="text-xl" />
+          </Link>
+          <Link
+            href="/demo"
+            className="bg-transparent border border-solid py-3 font-bold px-6 text-sm rounded-[8px] border-primary text-primary"
+          >
+            Book a Demo
+          </Link>
         </div>
       </div>
     </div>

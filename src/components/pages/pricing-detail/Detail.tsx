@@ -4,6 +4,11 @@ import { IoIosArrowForward } from "react-icons/io";
 
 import Link from "next/link";
 
+import { MdOutlineQuestionMark } from "react-icons/md";
+import { FaAngleRight } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
+
+
 type Plan = {
   name: string;
   problem: string;
@@ -12,7 +17,6 @@ type Plan = {
 };
 
 export default function PricingDetail() {
-
   const plans: Plan[] = [
     {
       name: "SME Leaders",
@@ -65,7 +69,10 @@ export default function PricingDetail() {
       </h3>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
         {plans.map((plan) => (
-          <div key={plan.name} className={`relative overflow-hidden bg-white shadow`}>
+          <div
+            key={plan.name}
+            className={`relative overflow-hidden bg-white shadow`}
+          >
             <div className="h-2 bg-primary w-full"></div>
             <div className="p-3 sm:p-10">
               <div className="flex items-baseline justify-between">
@@ -81,19 +88,25 @@ export default function PricingDetail() {
               <ul className="mt-4 space-y-4 md:space-y-8 text-sm">
                 <li className="flex items-start font-manrope text-base gap-5 leading-loose">
                   <div>
-                    <div className="size-[22px] bg-[#5198F3] rounded-full"></div>
+                    <div className="size-[22px] flex items-center justify-center text-white bg-[#5198F3] rounded-full">
+                      <MdOutlineQuestionMark />
+                    </div>
                   </div>
                   <span className="-mt-2">{plan.problem}</span>
                 </li>
                 <li className="flex items-start font-manrope text-base gap-5 leading-loose">
                   <div>
-                    <div className="size-[22px] bg-[#447DC8] rounded-full"></div>
+                    <div className="size-[22px] flex items-center justify-center text-white bg-[#447DC8] rounded-full">
+                      <FaAngleRight />
+                    </div>
                   </div>
                   <span className="-mt-2">{plan.suggestion}</span>
                 </li>
                 <li className="flex items-start font-manrope text-base gap-5 leading-loose">
                   <div>
-                    <div className="size-[22px] bg-[#1D4374] rounded-full"></div>
+                    <div className="size-[22px] flex items-center justify-center text-white bg-[#1D4374] rounded-full">
+                      <FaCheck />
+                    </div>
                   </div>
                   <span className="-mt-2">{plan.solution}</span>
                 </li>
