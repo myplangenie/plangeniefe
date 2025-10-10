@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Testimonial = { quote: string; author: string };
@@ -48,16 +48,39 @@ export default function Testimonials() {
   const pages = useMemo(() => chunk(testimonials, 3), []);
   const [index, setIndex] = useState(0);
   const max = pages.length - 1;
+  const [paused, setPaused] = useState(false);
+  const wrapRef = useRef<HTMLDivElement | null>(null);
 
   const prev = () => setIndex((i) => (i <= 0 ? max : i - 1));
   const next = () => setIndex((i) => (i >= max ? 0 : i + 1));
 
+  // Autoscroll with pause on hover and when tab is hidden
+  useEffect(() => {
+    const onVis = () => setPaused(document.visibilityState !== "visible");
+    document.addEventListener("visibilitychange", onVis);
+    let id: ReturnType<typeof setInterval> | undefined;
+    if (!paused && max > 0) {
+      id = setInterval(() => {
+        setIndex((i) => (i >= max ? 0 : i + 1));
+      }, 5000);
+    }
+    return () => {
+      if (id) clearInterval(id);
+      document.removeEventListener("visibilitychange", onVis);
+    };
+  }, [paused, max]);
+
   return (
-    <section className="text-black mt-24">
+    <section
+      className="text-black mt-24"
+      ref={wrapRef}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="max-w-[1200px] px-5 sm:px-10 mx-auto">
         <div className="text-center">
           <h4 className="text-2xl md:text-4xl font-bold font-manrope tracking-tight mb-10 max-w-3xl mx-auto leading-[1.3]">
-            Feedback from our top course recipients
+            Feedback from our customers
           </h4>
         </div>
 
