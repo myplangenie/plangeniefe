@@ -89,7 +89,7 @@ export default function PricingDetail() {
                 <li className="flex items-start font-manrope text-base gap-5 leading-loose">
                   <div>
                     <div className="size-[22px] flex items-center justify-center text-white bg-[#5198F3] rounded-full">
-                      <MdOutlineQuestionMark />
+                      <MdOutlineQuestionMark className="text-sm" />
                     </div>
                   </div>
                   <span className="-mt-2">{plan.problem}</span>
@@ -97,7 +97,7 @@ export default function PricingDetail() {
                 <li className="flex items-start font-manrope text-base gap-5 leading-loose">
                   <div>
                     <div className="size-[22px] flex items-center justify-center text-white bg-[#447DC8] rounded-full">
-                      <FaAngleRight />
+                      <FaAngleRight className="text-sm" />
                     </div>
                   </div>
                   <span className="-mt-2">{plan.suggestion}</span>
@@ -105,7 +105,7 @@ export default function PricingDetail() {
                 <li className="flex items-start font-manrope text-base gap-5 leading-loose">
                   <div>
                     <div className="size-[22px] flex items-center justify-center text-white bg-[#1D4374] rounded-full">
-                      <FaCheck />
+                      <FaCheck className="text-sm" />
                     </div>
                   </div>
                   <span className="-mt-2">{plan.solution}</span>
