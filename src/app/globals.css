@@ -125,6 +125,8 @@
   }
 }
 
+
+
 body {
   color: #12141D;
   font-family: var(--font-lato);
@@ -270,7 +272,7 @@ body {
 
 .logo-marquee-track {
   width: max-content;
-  animation: logo-marquee 35s linear infinite;
+  animation: logo-marquee 50s linear infinite;
 }
 
 /* fade edges so the loop feels smooth */

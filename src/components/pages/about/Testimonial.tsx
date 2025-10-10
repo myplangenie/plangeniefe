@@ -70,7 +70,11 @@ export default function Testimonials() {
               {pages.map((group, p) => (
                 <div key={p} className="w-full shrink-0">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {group.map((t, i) => (
+                    {group.map((t, i) => {
+                      const parts = t.author.split(",");
+                      const name = parts.length > 1 ? parts.slice(0, -1).join(",").trim() : t.author;
+                      const company = parts.length > 1 ? parts[parts.length - 1].trim() : "";
+                      return (
                       <article
                         key={`${p}-${i}`}
                         className="rounded-[8px] border border-[#12141D]/10 bg-white p-5 shadow-sm h-full flex flex-col"
@@ -78,12 +82,19 @@ export default function Testimonials() {
                         <p className="text-base leading-relaxed">“{t.quote}”</p>
                         <div className="mt-auto pt-4">
                           <div className="h-px bg-[#12141D]/10" />
-                          <p className="mt-3 text-sm font-medium text-[#12141D]/80">
-                            {t.author}
+                          <p className="mt-3 text-base font-semibold text-[#12141D]/80">
+                            {name}
+                            {company && (
+                              <>
+                                {", "}
+                                <em>{company}</em>
+                              </>
+                            )}
                           </p>
                         </div>
                       </article>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               ))}
