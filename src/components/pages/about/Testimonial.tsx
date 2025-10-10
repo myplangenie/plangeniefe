@@ -36,23 +36,52 @@ const testimonials: Testimonial[] = [
       "The destination is one thing to figure out, the journey is a different exercise and a wee bit more complicated. Just like your GPS, Plan Genie will help you get there safe and sound. I am a Plan Genie disciple, and I approve of this review!",
     author: "David Wilmot, Chair, TEC Canada",
   },
+  // New testimonials
+  {
+    quote:
+      "Business plans can be complicated, but Plan Genie is a simple way to get clarity, especially for our clients.",
+    author: "Michele Devlin, MacDev Finance",
+  },
+  {
+    quote:
+      "The framework is excellent. Provides a ton of clarity, particularly because I am really clear on sections 1–3 recently so could really tie to the action plans and see priorities.",
+    author: "Allison Bran, Rex Marketing and Design",
+  },
+  {
+    quote: "I appreciate the structure and end-to-end matrix of the tool.",
+    author: "Rob Robinson, Econotech",
+  },
+  {
+    quote:
+      "Planning is very important and it gives clarity to the purpose of being in business.",
+    author: "Ramandeep Baidwan, MDS Inc.",
+  },
+  {
+    quote:
+      "I ‘get it’ and I am aligned with how you view planning in business, but this process and online tool made it less overwhelming to get started.",
+    author: "Allison Bran, Rex Marketing and Design",
+  },
 ];
 
-function chunk<T>(arr: T[], size: number): T[][] {
-  const out: T[][] = [];
-  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
-  return out;
-}
-
 export default function Testimonials() {
-  const pages = useMemo(() => chunk(testimonials, 3), []);
+  // index controls a one-by-one scroll
   const [index, setIndex] = useState(0);
-  const max = pages.length - 1;
   const [paused, setPaused] = useState(false);
   const wrapRef = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const itemRefs = useRef<HTMLDivElement[]>([]);
 
-  const prev = () => setIndex((i) => (i <= 0 ? max : i - 1));
-  const next = () => setIndex((i) => (i >= max ? 0 : i + 1));
+  const max = testimonials.length - 1;
+
+  const scrollToIndex = (idx: number) => {
+    const el = itemRefs.current[idx];
+    const track = trackRef.current;
+    if (el && track) track.scrollTo({ left: el.offsetLeft, behavior: "smooth" });
+    setIndex(idx);
+  };
+
+  const prev = () => scrollToIndex(index <= 0 ? max : index - 1);
+  const next = () => scrollToIndex(index >= max ? 0 : index + 1);
 
   // Autoscroll with pause on hover and when tab is hidden
   useEffect(() => {
@@ -61,14 +90,15 @@ export default function Testimonials() {
     let id: ReturnType<typeof setInterval> | undefined;
     if (!paused && max > 0) {
       id = setInterval(() => {
-        setIndex((i) => (i >= max ? 0 : i + 1));
-      }, 5000);
+        const nxt = index >= max ? 0 : index + 1;
+        scrollToIndex(nxt);
+      }, 3500);
     }
     return () => {
       if (id) clearInterval(id);
       document.removeEventListener("visibilitychange", onVis);
     };
-  }, [paused, max]);
+  }, [paused, index, max]);
 
   
   return (
@@ -81,47 +111,41 @@ export default function Testimonials() {
       <div className="max-w-[1200px] px-5 sm:px-10 mx-auto">
         <div className="text-center">
           <h4 className="text-2xl md:text-4xl font-bold font-manrope tracking-tight mb-10 max-w-3xl mx-auto leading-[1.3]">
-            Feedback from our customers
+            How Leaders Are Planning Smarter With Us
           </h4>
         </div>
 
         <div className="relative">
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${index * 100}%)` }}
-            >
-              {pages.map((group, p) => (
-                <div key={p} className="w-full shrink-0">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {group.map((t, i) => {
-                      const parts = t.author.split(",");
-                      const name = parts.length > 1 ? parts.slice(0, -1).join(",").trim() : t.author;
-                      const company = parts.length > 1 ? parts[parts.length - 1].trim() : "";
-                      return (
-                      <article
-                        key={`${p}-${i}`}
-                        className="rounded-[8px] border border-[#12141D]/10 bg-white p-5 shadow-sm h-full flex flex-col"
-                      >
-                        <p className="text-base leading-relaxed">“{t.quote}”</p>
-                        <div className="mt-auto pt-4">
-                          <div className="h-px bg-[#12141D]/10" />
-                          <p className="mt-3 text-base font-semibold text-[#12141D]/80">
-                            {name}
-                            {company && (
-                              <>
-                                {", "}
-                                <em>{company}</em>
-                              </>
-                            )}
-                          </p>
-                        </div>
-                      </article>
-                      );
-                    })}
+          <div ref={trackRef} className="overflow-x-hidden">
+            <div className="flex gap-4 md:gap-6 snap-x snap-mandatory">
+              {testimonials.map((t, i) => {
+                const parts = t.author.split(",");
+                const name = parts.length > 1 ? parts.slice(0, -1).join(",").trim() : t.author;
+                const company = parts.length > 1 ? parts[parts.length - 1].trim() : "";
+                return (
+                  <div
+                    key={i}
+                    ref={(el) => el && (itemRefs.current[i] = el)}
+                    className="snap-center shrink-0 flex-[0_0_100%] md:flex-[0_0_33.333%]"
+                  >
+                    <article className="rounded-[8px] border border-[#12141D]/10 bg-white p-5 shadow-sm h-full flex flex-col">
+                      <p className="text-base leading-relaxed">“{t.quote}”</p>
+                      <div className="mt-auto pt-4">
+                        <div className="h-px bg-[#12141D]/10" />
+                        <p className="mt-3 text-base font-semibold text-[#12141D]/80">
+                          {name}
+                          {company && (
+                            <>
+                              {", "}
+                              <em>{company}</em>
+                            </>
+                          )}
+                        </p>
+                      </div>
+                    </article>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -134,11 +158,11 @@ export default function Testimonials() {
               <ChevronLeft className="size-5" />
             </button>
             <div className="flex items-center gap-2">
-              {pages.map((_, i) => (
+              {testimonials.map((_, i) => (
                 <span
                   key={i}
-                  className={`h-1.5 w-6 rounded-full ${
-                    i === index ? "bg-accent" : "bg-gray-300"
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === index ? "bg-accent w-6" : "bg-gray-300 w-2"
                   }`}
                 />
               ))}

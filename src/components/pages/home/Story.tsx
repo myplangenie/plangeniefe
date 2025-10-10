@@ -3,7 +3,7 @@ import LoImg from "@/images/lo.jpeg";
 
 const Story = () => {
   const id = "Q20i7EfzQ-Y";
-  const embed = `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&playsinline=1`;
+  const embed = `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&controls=1&playsinline=1`;
   return (
     <section className="mt-10 md:mt-16 bg-[#FAFAFA]">
       <div className="mx-auto ">
