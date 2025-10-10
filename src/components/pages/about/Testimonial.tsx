@@ -70,6 +70,7 @@ export default function Testimonials() {
     };
   }, [paused, max]);
 
+  
   return (
     <section
       className="text-black mt-24"
