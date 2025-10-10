@@ -61,7 +61,7 @@ const Navigation = () => {
               Platform
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href="/solutions"
               aria-current={isActive("/solutions") ? "page" : undefined}
@@ -69,7 +69,7 @@ const Navigation = () => {
             >
               Solutions
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               href="/pricing"
@@ -137,7 +137,7 @@ const Navigation = () => {
                   Platform
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/solutions"
                   aria-current={isActive("/solutions") ? "page" : undefined}
@@ -148,7 +148,7 @@ const Navigation = () => {
                 >
                   Solutions
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/pricing"

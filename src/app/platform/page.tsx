@@ -4,13 +4,15 @@ import Testimonials from "@/components/pages/about/Testimonial";
 import PlatformCarousel from "@/components/pages/platform/Embed";
 import PlatformHero from "@/components/pages/platform/Hero";
 import PlatformPillars from "@/components/pages/platform/Pillars";
+import PricingSect from "@/components/pages/pricing-detail/Detail";
 
 const Platform = () => {
   return (
     <DisplayLayout>
       <PlatformHero />
       <PlatformPillars />
-      <PlatformCarousel />
+      <PricingSect />
+      {/* <PlatformCarousel /> */}
       <Testimonials />
     </DisplayLayout>
   );

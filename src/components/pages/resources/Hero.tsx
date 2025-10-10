@@ -2,7 +2,7 @@ import { FaCheck } from "react-icons/fa6";
 
 export default function ResourcesHero() {
   return (
-    <header className="bg-primary pt-40 md:pt-52 pb-14 md:pb-24 text-white">
+    <header className="bg-primar hero-bg pt-40 md:pt-52 pb-14 md:pb-24 text-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
         <div className="flex flex-col items-center text-center gap-4">
           <ul className="text-xs sm:text-sm opacity-80 mb-8 hidden md:flex gap-4 flex-wrap justify-center">

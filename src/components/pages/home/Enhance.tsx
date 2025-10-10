@@ -15,17 +15,17 @@ export default function Enhance() {
     {
       title: "Capture your ideas using smart prompts",
       content:
-        "Picking a domain is an important step in making your product exclusive and scalable.",
+        "Every great plan begins with a spark. Plan Genie’s intelligent prompts help you capture that spark and turn it into structure. They guide your thinking, uncover key insights, and organize your ideas into a framework you can build on. It feels natural, fast, and intuitive, like having a strategist sitting beside you.",
     },
     {
       title: "Watch our AI build your strategic roadmap",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at dui sed velit pulvinar gravida. Aenean mattis, magna nec dictum vehicula, nunc erat bibendum massa.",
+        "Once your ideas take shape, Plan Genie’s AI steps in to design a roadmap that connects your vision to real action. It outlines goals, defines strategies, and identifies opportunities you may not have seen yet. Your plan evolves in front of you with timelines, forecasts, and recommendations personalized to your business.",
     },
     {
       title: "Track your goals and iterate as you grow",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non purus metus. Phasellus tristique, lorem eget gravida blandit, arcu ligula porttitor augue.",
+        "Planning is only powerful when it lives in motion. With Plan Genie, you can see how your strategies perform over time through dynamic dashboards and smart insights. Review your progress, adjust your focus, and keep refining your path as your business grows. It is planning made alive, continuous, data-informed, and always one step ahead.",
     },
   ];
 

@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const PlatformHero = () => {
   return (
-    <header className="bg-primary pt-40 md:pt-52 pb-16 md:pb-36 text-white">
+    <header className="hero-bg pt-40 md:pt-52 pb-16 md:pb-36 text-white">
       <div className="max-w-[1200px] mx-auto text-center w-full md:w-[90%] px-5 sm:px-10">
         <ul className="text-xs sm:text-sm opacity-80 mb-5 hidden md:flex gap-4 flex-wrap w-max mx-auto">
           <li className="flex items-center font-manrope font-bold text-sm gap-2">

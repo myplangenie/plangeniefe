@@ -92,7 +92,7 @@ export default function Testimonials() {
       id = setInterval(() => {
         const nxt = index >= max ? 0 : index + 1;
         scrollToIndex(nxt);
-      }, 3500);
+      }, 1800);
     }
     return () => {
       if (id) clearInterval(id);

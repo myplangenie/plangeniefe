@@ -2,7 +2,7 @@ import { FaCheck } from "react-icons/fa6";
 
 export default function SiteHero() {
   return (
-    <div className="bg-primary pt-48 pb-28 text-white">
+    <div className="bg-primar hero-bg pt-48 pb-28 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center gap-4">
           <ul className="text-xs sm:text-sm opacity-80 mb-4 hidden md:flex gap-4 flex-wrap justify-center">

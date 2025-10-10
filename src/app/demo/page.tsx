@@ -3,12 +3,20 @@
 import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import DisplayLayout from "@/components/layout/displayLayout";
 
 import { FaCheck } from "react-icons/fa6";
+import HeroImage from "@/components/pages/home/HeroImage";
 
 const RequestDemo = () => {
   const schema = useMemo(
@@ -24,6 +32,7 @@ const RequestDemo = () => {
         company: yup.string().optional(),
         requirement: yup.string().optional(),
         subscribe: yup.boolean().optional(),
+        offering: yup.string().optional(),
       }),
     []
   );
@@ -41,6 +50,7 @@ const RequestDemo = () => {
       company: "",
       requirement: "",
       subscribe: false,
+      offering: "",
     },
     mode: "onBlur",
   });
@@ -53,16 +63,19 @@ const RequestDemo = () => {
 
   return (
     <DisplayLayout>
-      <section className="relative bg-primary [#F4F7F2] pt-28 pb-24">
+      <section className="relative hero-bg [#F4F7F2] pt-28 pb-24 px-5 md:px-0">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-12 items-center">
             {/* Left - Heading and imagery */}
             <div className="md:col-span-6">
               <h1 className="text-white font-bold font-manrope text-4xl sm:text-5xl md:text-5xl leading-tight tracking-tight">
                 Get a Free 30-Minute
                 <br /> Personalized Demo
               </h1>
-              <p className="mt-4 text-lg text-white font-manrope max-w-xl leading-loose mb-5">
+              <div className="mt-20">
+                <HeroImage variant="compact" />
+              </div>
+              <p className="mt-4 text-lg text-white font-manrope max-w-xl leading-loose md:mb-5">
                 Get a guided tour with our experts to explore the
                 platform&apos;s features, pricing, and more tailored to your
                 business needs. See it in action and discover its potential for
@@ -186,6 +199,47 @@ const RequestDemo = () => {
                           placeholder="Company"
                           className="h-12 rounded-xl border border-[#e5e7eb]"
                         />
+                      )}
+                    />
+                  </div>
+
+                  {/* Offering */}
+                  <div className="mb-4">
+                    <label className="block text-[15px] text-[#1a1a1a]/80 mb-2">
+                      Select Offering
+                    </label>
+                    <Controller
+                      name="offering"
+                      control={control}
+                      render={({ field }) => (
+                        <Select
+                          value={field.value}
+                          onValueChange={field.onChange}
+                        >
+                          <SelectTrigger className="!h-12 rounded-xl border border-[#e5e7eb] w-full py-4">
+                            <SelectValue placeholder="Select Offering" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="Plan Genie Lite">
+                              Plan Genie Lite
+                            </SelectItem>
+                            <SelectItem value="Plan Genie Pro">
+                              Plan Genie Pro
+                            </SelectItem>
+                            <SelectItem value="Plan Genie Prime">
+                              Plan Genie Prime
+                            </SelectItem>
+                            <SelectItem value="Plan Genie Life">
+                              Plan Genie Life
+                            </SelectItem>
+                            <SelectItem value="Plan Genie Live Training">
+                              Plan Genie Live Training
+                            </SelectItem>
+                            <SelectItem value="Plan Genie Enterprise">
+                              Plan Genie Enterprise
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
                       )}
                     />
                   </div>

@@ -16,18 +16,18 @@ const Story = () => {
                 alt="Patrick Lo"
                 width={80}
                 height={80}
-                className="w-32 h-32 rounded-full object-cover"
+                className="w-40 h-40 rounded-full object-cover"
               />
               <div>
-                <h3 className="text-lg mb-1 font-bold leading-tight">
+                <h3 className="text-xl mb-1 font-bold leading-tight">
                   Patrick Lo
                 </h3>
-                <p className="text-base text-[#12141D]/70">
+                <p className="text-lg text-[#12141D]/70">
                   Founder and CEO of Trakking and Canaan Group.
                 </p>
               </div>
             </div>
-            <p className="text-sm md:text-base leading-loose font-medium">
+            <p className="text-sm md:text-lg leading-loose font-medium">
               Patrick Lo is the visionary founder and CEO of Trakking and Canaan
               Group, where he has led innovation in logistics and supply chain
               optimization for more than two decades. Renowned for his
@@ -35,7 +35,7 @@ const Story = () => {
               excellence, Patrick has built companies that blend technology,
               efficiency, and purpose.
             </p>
-            <p className="text-sm md:text-base leading-loose font-medium">
+            <p className="text-sm md:text-lg leading-loose font-medium">
               In this video, Patrick shares his journey in business and how
               leveraging Plan Genie has helped him strengthen strategic
               alignment, streamline decision-making, and lead his organizations
