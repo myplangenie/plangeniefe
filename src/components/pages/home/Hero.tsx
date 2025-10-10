@@ -16,7 +16,6 @@ import _4Img from "@/images/hero/_4.svg";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-
 import ArrowImg from "@/images/hero/arrow.svg";
 
 import MarkImg from "@/images/hero/mark.svg";
@@ -35,19 +34,32 @@ export default function HomeHero() {
   useEffect(() => {
     if (!scope.current) return;
     const ctx = gsap.context(() => {
-      gsap.set([".hero-card", ".hero-deco"], { autoAlpha: 0, y: 24, scale: 0.94 });
+      gsap.set([".hero-card", ".hero-deco"], {
+        autoAlpha: 0,
+        y: 24,
+        scale: 0.94,
+      });
 
-      const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.8 } });
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 0.8 },
+      });
       // Animate the four main cards first
       tl.to(".hero-card", { autoAlpha: 1, y: 0, scale: 1, stagger: 0.18 });
       // Then decorations (mark, arrow, flower, curve)
-      tl.to(".hero-deco", { autoAlpha: 1, y: 0, scale: 1, stagger: 0.12 }, "-=0.3");
+      tl.to(
+        ".hero-deco",
+        { autoAlpha: 1, y: 0, scale: 1, stagger: 0.12 },
+        "-=0.3"
+      );
     }, scope);
     return () => ctx.revert();
   }, []);
 
   return (
-    <header className="relative hero-bg pt-32 sm:pt-40 md:pt-52 pb-40 sm:pb-20 md:pb-24 text-white" ref={scope}>
+    <header
+      className="relative hero-bg pt-32 sm:pt-40 md:pt-52 pb-40 sm:pb-20 md:pb-24 text-white"
+      ref={scope}
+    >
       <div className="flex flex-col md:grid md:grid-cols-[1.2fr_1fr] items-center gap-28 md:gap-14 px-5 sm:px-10 md:px-20">
         <div className="flex flex-col gap-2 md:gap-4">
           <ul className="hidden text-xs sm:text-sm opacity-80 mb-5 md:flex gap-4 flex-wrap">
@@ -55,7 +67,7 @@ export default function HomeHero() {
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
                 <FaCheck className="text-[10px] text-accent" />
               </div>{" "}
-              Plans built in minutes, not weeks
+              Actionable plans built in minutes
             </li>
             <li className="flex items-center font-manrope font-bold text-sm gap-2">
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
@@ -67,7 +79,7 @@ export default function HomeHero() {
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
                 <FaCheck className="text-[10px] text-accent" />
               </div>{" "}
-              Trusted by top business coaches
+              Trusted by top business leaders
             </li>
           </ul>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold font-manrope !leading-[1.6] md:!leading-[1.1] md:mb-2">
