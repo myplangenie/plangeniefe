@@ -11,13 +11,13 @@ const Story = () => {
           {/* Left: Bio */}
           <div className=" rounded-lg px-5 pb-10 pt-14 md:p-20">
             <div className="flex items-center gap-4 mb-3">
-              <Image src={LoImg} alt="Patrick Lo" width={80} height={80} className="w-28 h-28 rounded-full object-cover" />
+              <Image src={LoImg} alt="Patrick Lo" width={80} height={80} className="w-32 h-32 rounded-full object-cover" />
               <div>
                 <h3 className="text-lg mb-1 font-bold leading-tight">Patrick Lo</h3>
                 <p className="text-sm text-[#12141D]/70">Founder and CEO of Trakking and Canaan Group.</p>
               </div>
             </div>
-            <p className="text-sm leading-loose font-medium">
+            <p className="text-base leading-loose font-medium">
               Patrick Lo is the visionary founder and CEO of Trakking and Canaan Group, leading innovation in logistics and supply chain optimization for over two decades. Known for his forward-thinking approach and commitment to operational excellence, Patrick has built companies that bridge technology, efficiency, and purpose, empowering businesses to move smarter and grow stronger.
             </p>
           </div>
@@ -29,7 +29,7 @@ const Story = () => {
                 src={embed}
                 title="Plan Genie Story"
                 className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               />
