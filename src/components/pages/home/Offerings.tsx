@@ -15,32 +15,32 @@ export default function ProductOfferings() {
     {
       header: "Plan Genie Lite",
       text: "Core business planning templates and AI support for beginners",
-      link: "",
+      link: "/demo",
     },
     {
       header: "Plan Genie Pro",
       text: "Deeper planning tools, basic guidance features, and document outputs",
-      link: "",
+      link: "/demo",
     },
     {
       header: "Plan Genie Prime",
       text: "Full-stack business planning with financial modeling, strategic guidance, and collaboration",
-      link: "",
+      link: "/demo",
     },
     {
       header: "Plan Genie Life",
       text: "Personal life planning and visioning tools",
-      link: "",
+      link: "/demo",
     },
     {
       header: "Plan Genie Live Training",
       text: "Guided workshops, planning sprints, and post-plan execution support",
-      link: "",
+      link: "/demo",
     },
     {
       header: "Plan Genie Enterprise",
       text: "Custom AI-powered solutions with workflow automation, system integration, and organizational efficiency at scale",
-      link: "",
+      link: "/demo",
     },
   ];
   return (
@@ -77,9 +77,9 @@ export default function ProductOfferings() {
           </div>
         </div>
         <div className="flex items-center gap-3 justify-center mt-12 sm:mt-20 flex-wrap">
-            <Link href="" className="flex items-center gap-2 bg-accent px-6 sm:px-8 py-3 sm:py-4 text-sm text-white border border-solid border-accent rounded-[8px]">
+            <Link href="/demo" className="flex items-center gap-2 bg-accent px-6 sm:px-8 py-3 sm:py-4 text-sm text-white border border-solid border-accent rounded-[8px]">
             Start Planning Free <FaArrowRightLong /></Link>
-            <Link href="" className="flex items-center gap-2 bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-sm border border-solid border-[#1D4374] text-[#1D4374] rounded-[8px]">
+            <Link href="/demo" className="flex items-center gap-2 bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-sm border border-solid border-[#1D4374] text-[#1D4374] rounded-[8px]">
             Explore Facilitation Options</Link>
         </div>
       </div>

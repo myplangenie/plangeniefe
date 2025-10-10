@@ -1,19 +1,43 @@
+import Image from "next/image";
+import LoImg from "@/images/lo.jpeg";
+
 const Story = () => {
+  const id = "Q20i7EfzQ-Y";
+  const embed = `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&playsinline=1`;
   return (
-    <div className="story relative mt-10 md:mt-16">
-      <div className="bg-white absolute top-10 md:top-20 right-4 left-4 md:left-auto md:right-28 block md:max-w-[400px] p-4 md:p-5">
-        <h3 className="text-3xl font-bold mb-3">Enhance & scale your business experience</h3>
-        <p className="text-sm leading-loose font-medium">
-          To help people and organizations turn vision into structure and
-          strategy into execution through modern business planning tools, live
-          facilitation, and long-term accountability systems.
-        </p>
-        <p className="text-sm leading-loose font-medium mt-5">
-          Multiple contributors. Permission controls. Audit history. Designed for growing teams.
-        </p>
-        <h4 className="text-sm mt-3 font-bold">Leslie Alexander, Lead Coach</h4>
+    <section className="mt-10 md:mt-16 bg-[#FAFAFA]">
+      <div className="mx-auto ">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Left: Bio */}
+          <div className=" rounded-lg px-5 pb-10 pt-14 md:p-20">
+            <div className="flex items-center gap-4 mb-3">
+              <Image src={LoImg} alt="Patrick Lo" width={80} height={80} className="w-28 h-28 rounded-full object-cover" />
+              <div>
+                <h3 className="text-lg mb-1 font-bold leading-tight">Patrick Lo</h3>
+                <p className="text-sm text-[#12141D]/70">Founder and CEO of Trakking and Canaan Group.</p>
+              </div>
+            </div>
+            <p className="text-sm leading-loose font-medium">
+              Patrick Lo is the visionary founder and CEO of Trakking and Canaan Group, leading innovation in logistics and supply chain optimization for over two decades. Known for his forward-thinking approach and commitment to operational excellence, Patrick has built companies that bridge technology, efficiency, and purpose, empowering businesses to move smarter and grow stronger.
+            </p>
+          </div>
+
+          {/* Right: Video */}
+          <div className="bg-blue-800 overflow-hidden shadow-sm ring-1 ring-black/10">
+            <div className="relative w-full min-h-[260px] sm:min-h-[320px] md:min-h-[420px]" style={{ aspectRatio: "16 / 10" }}>
+              <iframe
+                src={embed}
+                title="Plan Genie Story"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

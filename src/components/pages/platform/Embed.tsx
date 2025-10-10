@@ -8,6 +8,7 @@ import EngineUser from "@/images/pillar-user.svg";
 import Engine from "@/images/pillar-web.svg";
 
 import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const PlatformCarousel = () => {
   const pillarBox = [
@@ -59,22 +60,30 @@ const PlatformCarousel = () => {
       </div>
       <div className="mt-20 md:mt-36">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
-          <div className="bg-[#12141D] w-full aspect-[16/9] rounded-[10px]"></div>
-          <div className="py-6 md:py-10">
-            <h3 className="text-4xl leading-[1.3] font-bold mb-10">
-              A time-lapse of a plan being created, edited, and tracked from
-              first prompt to dashboard activation.
-            </h3>
-            <p className="text-base text-[#12141D] opacity-80 mb-10">
-              Experience smart planning now
-            </p>
-            <div className="flex gap-2">
-              <button className="bg-accent flex items-center gap-2 border border-solid py-4 text-white font-bold px-6 text-sm rounded-[8px] border-accent">
-                See Pricing <FaArrowRightLong className="text-lg" />
-              </button>
-              <button className="bg-transparent flex items-center gap-2 border border-solid border-[#1D4374] py-4 font-bold px-6 text-sm rounded-[8px] text-[#183B56]">
-                See Features in Action
-              </button>
+          <div className="bg-[#12141D] w-full h-[20rem] md:h-full rounded-[10px]"></div>
+          <div className="">
+            <div className="py-6 md:py-32">
+              <h3 className="text-4xl leading-[1.3] font-bold mb-10">
+                A time-lapse of a plan being created, edited, and tracked from
+                first prompt to dashboard activation.
+              </h3>
+              <p className="text-base text-[#12141D] opacity-80 mb-10">
+                Experience smart planning now
+              </p>
+              <div className="flex gap-2">
+                <Link
+                  href="/pricing"
+                  className="bg-accent flex items-center gap-2 border border-solid py-4 text-white font-bold px-6 text-sm rounded-[8px] border-accent"
+                >
+                  See Pricing <FaArrowRightLong className="text-lg" />
+                </Link>
+                <Link
+                  href="/demo"
+                  className="bg-transparent flex items-center gap-2 border border-solid border-[#1D4374] py-4 font-bold px-6 text-sm rounded-[8px] text-[#183B56]"
+                >
+                  See Features in Action
+                </Link>
+              </div>
             </div>
           </div>
         </div>

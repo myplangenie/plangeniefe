@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 import { FaCheck } from "react-icons/fa6";
+import Link from "next/link";
 
 type Plan = {
   name: string;
@@ -173,7 +174,9 @@ export default function PricingSect() {
                 ) : plan.name === "Prime" ? (
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-0">
-                      <span className="text-base text-white font-bold transition-colors">$</span>
+                      <span className="text-base text-white font-bold transition-colors">
+                        $
+                      </span>
                       <span className="text-4xl font-black text-white transition-all duration-300">
                         {plan.priceMonthly}
                       </span>
@@ -189,7 +192,9 @@ export default function PricingSect() {
                 ) : (
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-0">
-                      <span className="text-base text-black font-bold transition-colors">$</span>
+                      <span className="text-base text-black font-bold transition-colors">
+                        $
+                      </span>
                       <span className="text-3xl font-black text-black transition-all duration-300">
                         {plan.priceMonthly}
                       </span>
@@ -228,15 +233,16 @@ export default function PricingSect() {
               </ul>
 
               <div className="absolute bottom-5 left-0 px-5 w-full">
-                <Button
-                  className={`border border-solid ${
+                <Link
+                  href="/demo"
+                  className={`border block text-center py-1 rounded-lg border-solid ${
                     plan.name === "Prime"
                       ? "bg-white border-white text-[#1a1a1a] hover:bg-accent/90 hover:border-none hover:text-white"
                       : "bg-white text-black border-[#E1E1E1] hover:bg-primary/90 hover:text-white"
                   } w-full`}
                 >
                   Get Started
-                </Button>
+                </Link>
               </div>
             </div>
           </div>

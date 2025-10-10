@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaCheck } from "react-icons/fa6";
 
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -36,12 +37,18 @@ const PlatformHero = () => {
           intuitive platform
         </p>
         <div className="flex gap-2 items-center mx-auto w-max flex-wrap">
-          <button className="bg-accent flex items-center gap-2 border border-solid py-3 sm:py-4 text-white font-bold px-6 text-sm rounded-[8px] border-accent">
+          <Link
+            href="/pricing"
+            className="bg-accent flex items-center gap-2 border border-solid py-3 sm:py-4 text-white font-bold px-6 text-sm rounded-[8px] border-accent"
+          >
             See Pricing <FaArrowRightLong className="text-lg" />
-          </button>
-          <button className="bg-transparent flex items-center gap-2 border border-solid py-3 sm:py-4 font-bold px-6 text-sm rounded-[8px] border-white text-white">
+          </Link>
+          <Link
+            href="/demo"
+            className="bg-transparent flex items-center gap-2 border border-solid py-3 sm:py-4 font-bold px-6 text-sm rounded-[8px] border-white text-white"
+          >
             Book a Demo <IoIosArrowForward className="text-lg" />
-          </button>
+          </Link>
         </div>
       </div>
     </header>

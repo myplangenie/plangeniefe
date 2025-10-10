@@ -104,7 +104,7 @@ export default function PricingDetail() {
       </div>
       <Link
         className="flex items-center gap-2 bg-accent mt-14 text-sm px-4 mx-auto w-max text-white rounded-[5px] py-4 justify-center"
-        href=""
+        href="/demo"
       >
         See Plan Genie In Action <IoIosArrowForward />
       </Link>

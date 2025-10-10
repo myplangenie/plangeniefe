@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import AdImg from "@/images/ad.svg";
+import FrameImg from "@/images/frame.svg";
+import InvoiceImg from "@/images/invoice.svg";
 
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
@@ -28,27 +30,75 @@ export default function Enhance() {
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [showMain, setShowMain] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+
+  // Trigger animations when the section scrolls into view
+  useEffect(() => {
+    if (!rootRef.current || hasAnimated) return;
+    const el = rootRef.current;
+    const io = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setShowMain(true);
+          // Overlay animation starts after main has animated in
+          const t = setTimeout(() => setShowOverlay(true), 820);
+          setHasAnimated(true);
+          io.disconnect();
+          return () => clearTimeout(t);
+        }
+      },
+      { root: null, threshold: 0.25 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [hasAnimated]);
 
   const toggle = (idx: number) =>
     setOpenIndex((prev) => (prev === idx ? null : idx));
 
   return (
-    <div className="enterprise py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-16 md:mt-24 items-center">
-      <div>
-        <Image
-          src={AdImg}
-          alt="thumb"
-          quality={100}
-          width={100}
-          height={100}
-          className="w-full h-auto"
-        />
+    <div ref={rootRef} className="enterprise py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 mt-16 md:mt-24 items-center">
+      <div className="relative">
+        <div
+          style={{ willChange: "transform, opacity" }}
+          className={`transition-all duration-700 ease-out ${
+            showMain ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-[0.98] translate-y-1"
+          }`}
+        >
+          <Image
+            src={FrameImg}
+            alt="thumb"
+            quality={100}
+            width={100}
+            height={100}
+            className="w-full h-auto"
+          />
+        </div>
+        <div
+          style={{ willChange: "transform, opacity" }}
+          className={`absolute top-[35%] -right-7 md:-right-20 w-full max-w-[300px] transition-all duration-700 ease-out ${
+            showOverlay ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-[0.98] translate-y-1"
+          }`}
+        >
+          <Image
+            src={InvoiceImg}
+            alt="invoice"
+            quality={100}
+            width={100}
+            height={100}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
       <div className="font-manrope text-white">
-        <h3 className="text-3xl md:text-4xl mb-3 font-bold leading-[1.3] md:w-[60%]">
+        <h3 className="text-3xl md:text-4xl mb-3 font-bold leading-[1.3] md:w-[80%]">
           Enhance & scale your business experience
         </h3>
-        <p className="text-sm md:text-base mb-3 leading-loose w-full md:w-[78%] max-w-[572px]">
+        <p className="text-sm md:text-base mb-3 leading-loose w-full md:w-[85%] max-w-[572px]">
           Whether you are launching a startup, coaching businesses, leading a
           team, Plan Genie is designed to work the way you think.
         </p>

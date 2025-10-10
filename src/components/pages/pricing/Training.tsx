@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function PricingTraining() {
   return (
@@ -23,12 +24,12 @@ export default function PricingTraining() {
             your plan.
           </p>
           <div className="mt-20">
-            <Button
-              variant="outline"
-              className="bg-white border border-[#E1E1E1] px-14 text-[#1a1a1a] hover:bg-accent/90"
+            <Link
+              href="/demo"
+              className="bg-white border border-[#E1E1E1] px-14 py-2 text-sm rounded-lg text-[#1a1a1a] hover:bg-accent/90"
             >
               Book A Consultation
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="rounded-lg bg-[#FAFAFA] px-5 py-12">
@@ -40,12 +41,12 @@ export default function PricingTraining() {
             challenges.
           </p>
           <div className="mt-20">
-            <Button
-              variant="outline"
-              className="bg-white border border-[#E1E1E1] px-14 text-[#1a1a1a] hover:bg-accent/90"
+            <Link
+              href="/demo"
+              className="bg-white border border-[#E1E1E1] px-14 py-2 text-sm rounded-lg text-[#1a1a1a] hover:bg-accent/90"
             >
               Book A Consultation
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="rounded-lg bg-[#FAFAFA] px-5 py-12">
@@ -57,12 +58,12 @@ export default function PricingTraining() {
             full organizations.
           </p>
           <div className="mt-20">
-            <Button
-              variant="outline"
-              className="bg-white border border-[#E1E1E1] px-14 text-[#1a1a1a] hover:bg-accent/90"
+            <Link
+              href="/demo"
+              className="bg-white border border-[#E1E1E1] px-14 py-2 text-sm rounded-lg text-[#1a1a1a] hover:bg-accent/90"
             >
               Book A Consultation
-            </Button>
+            </Link>
           </div>
         </div>
         <div className="rounded-lg bg-[#FAFAFA] px-5 py-12">
@@ -74,12 +75,12 @@ export default function PricingTraining() {
             sessions.
           </p>
           <div className="mt-20">
-            <Button
-              variant="outline"
-              className="bg-white border border-[#E1E1E1] px-14 text-[#1a1a1a] hover:bg-accent/90"
+            <Link
+              href="/demo"
+              className="bg-white border border-[#E1E1E1] px-14 py-2 text-sm rounded-lg text-[#1a1a1a] hover:bg-accent/90"
             >
               Book A Consultation
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

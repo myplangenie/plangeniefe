@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+export const dynamic = "force-dynamic";
 import DisplayLayout from "@/components/layout/displayLayout";
 import ResourcesHero from "@/components/pages/resources/Hero";
 import TopDownloads from "@/components/pages/resources/Downloads";
@@ -15,9 +16,9 @@ export default function ResourcesPage() {
       page="resources"
     >
       <ResourcesHero />
-      <TopDownloads />
       <VideoTutorials />
       <FeaturedArticles />
+      <TopDownloads />
       <Testimonials />
     </DisplayLayout>
   );

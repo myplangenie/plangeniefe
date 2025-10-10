@@ -101,7 +101,7 @@ const Navigation = () => {
       </div>
       <div className="hidden md:block">
         <Link
-          href="/signin"
+          href="/demo"
           className="font-manrope font-medium text-white text-sm hover:text-accent mr-6 bg-accent px-7 py-3 rounded-[8px]"
         >
           Request Demo
@@ -188,9 +188,9 @@ const Navigation = () => {
             </ul>
             <div className="mt-4">
               <Link
-                href="/signin"
+                href="/demo"
                 onClick={() => setOpen(false)}
-                className="inline-flex w-full items-center justify-center font-manrope font-medium text-sm bg-accent text-white px-5 py-3 rounded-[8px]"
+                className="inline-flex w-full items-center justify-center font-manrope font-medium text-sm bg-accent text-white px-5 py-3 rounded-[8px] hover:!text-white"
               >
                 Request Demo
               </Link>

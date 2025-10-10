@@ -3,20 +3,23 @@ import DisplayLayout from "@/components/layout/displayLayout";
 import Testimonials from "@/components/pages/about/Testimonial";
 import Enhance from "@/components/pages/home/Enhance";
 import HomeHero from "@/components/pages/home/Hero";
+import LogoCarousel from "@/components/pages/home/LogoCarousel";
+import BuiltFor from "@/components/pages/home/BuiltFor";
 import ProductOfferings from "@/components/pages/home/Offerings";
 import Props from "@/components/pages/home/Props";
 import Story from "@/components/pages/home/Story";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       <DisplayLayout>
         <HomeHero />
+        <LogoCarousel />
+        <BuiltFor />
         <Props />
         <Enhance />
-        <Story />
         <ProductOfferings />
+        <Story />
         <Testimonials />
       </DisplayLayout>
     </div>

@@ -4,6 +4,7 @@ import { FaCheck } from "react-icons/fa6";
 import AdImg from "@/images/ad.svg";
 
 import { IoArrowForward } from "react-icons/io5";
+import Link from "next/link";
 
 
 export default function Ad() {
@@ -51,8 +52,8 @@ export default function Ad() {
           </li>
         </ul>
         <div className="flex gap-2 items-center flex-wrap">
-            <button className="bg-accent flex items-center gap-1 border border-solid py-3 text-white font-bold px-6 text-sm rounded-[8px] border-accent">See Pricing <IoArrowForward className="text-xl" /></button>
-            <button className="bg-transparent border border-solid py-3 font-bold px-6 text-sm rounded-[8px] border-primary text-primary">Book a Demo</button>
+            <Link href="/pricing" className="bg-accent flex items-center gap-1 border border-solid py-3 text-white font-bold px-6 text-sm rounded-[8px] border-accent">See Pricing <IoArrowForward className="text-xl" /></Link>
+            <Link href="/demo" className="bg-transparent border border-solid py-3 font-bold px-6 text-sm rounded-[8px] border-primary text-primary">Book a Demo</Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { FaXTwitter, FaInstagram, FaFacebook, FaTiktok, FaLinkedin } from "react-icons/fa6";
 
 interface FooterProps {
   title?: string;
@@ -23,13 +24,13 @@ const Footer = (props: FooterProps) => {
               {props.page !== "resources" ? (
                 <>
                   <Link
-                    href=""
+                    href="/demo"
                     className="flex items-center gap-2 bg-white px-6 sm:px-8 py-3 sm:py-4 text-sm text-accent rounded-[5px]"
                   >
                     Start Planning Free
                   </Link>
                   <Link
-                    href=""
+                    href="/demo"
                     className="flex items-center gap-2 bg-accent px-6 sm:px-8 py-3 sm:py-4 text-sm text-white rounded-[5px]"
                   >
                     Explore Facilitation Options
@@ -57,18 +58,62 @@ const Footer = (props: FooterProps) => {
           <ul className="flex flex-wrap items-center gap-4 sm:gap-7">
             <li>
               <Link
-                href="/privacy"
-                className="text-sm font-medium leading-loose font-manrope text-white mr-2 sm:mr-6"
+                href="https://x.com/myplangenie"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Twitter (X)"
+                className="text-white hover:text-accent mr-2 sm:mr-6 inline-flex items-center justify-center"
               >
-                Lite Plan Template
+                <FaXTwitter className="text-2xl" />
+                <span className="sr-only">Twitter (X)</span>
               </Link>
             </li>
             <li>
               <Link
-                href="/terms"
-                className="text-sm font-medium leading-loose font-manrope text-white mr-2 sm:mr-6"
+                href="https://www.instagram.com/myplangenie/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="text-white hover:text-accent mr-2 sm:mr-6 inline-flex items-center justify-center"
               >
-                Execution Dashboard Demo
+                <FaInstagram className="text-2xl" />
+                <span className="sr-only">Instagram</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.facebook.com/myplangenie"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="text-white hover:text-accent mr-2 sm:mr-6 inline-flex items-center justify-center"
+              >
+                <FaFacebook className="text-2xl" />
+                <span className="sr-only">Facebook</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.tiktok.com/@myplangenie?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TikTok"
+                className="text-white hover:text-accent mr-2 sm:mr-6 inline-flex items-center justify-center"
+              >
+                <FaTiktok className="text-2xl" />
+                <span className="sr-only">TikTok</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.linkedin.com/company/plan-genie/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="text-white hover:text-accent mr-2 sm:mr-6 inline-flex items-center justify-center"
+              >
+                <FaLinkedin className="text-2xl" />
+                <span className="sr-only">LinkedIn</span>
               </Link>
             </li>
           </ul>
