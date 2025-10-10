@@ -12,7 +12,7 @@ const Footer = (props: FooterProps) => {
   return (
     <footer className="bg-black px-5 sm:px-10 md:px-20 mt-[16rem] md:mt-[23rem]">
       <div className="h-[12rem] md:h-[15rem] relative">
-        <div className="bg-primary h-[26rem] md:h-[30rem] rounded-[10px] absolute w-full -top-[13rem] md:-top-[15rem] text-center text-white flex items-center justify-center">
+        <div className="bg-primar hero-bg h-[26rem] md:h-[30rem] rounded-[10px] absolute w-full -top-[13rem] md:-top-[15rem] text-center text-white flex items-center justify-center">
           <div className="w-full md:w-[70%] max-w-[800px] mx-auto px-5">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-manrope font-bold leading-[1.4] mb-4">
               {props?.title || "Start planning with intelligence, today."}
