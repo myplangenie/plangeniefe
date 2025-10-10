@@ -6,12 +6,15 @@ import PlatformHero from "@/components/pages/platform/Hero";
 import PlatformPillars from "@/components/pages/platform/Pillars";
 import PricingSect from "@/components/pages/pricing-detail/Detail";
 
+import Ad from "@/components/pages/pricing-detail/Ad";
+
 const Platform = () => {
   return (
     <DisplayLayout>
       <PlatformHero />
       <PlatformPillars />
       <PricingSect />
+      <Ad />
       <PlatformCarousel />
       <Testimonials />
     </DisplayLayout>

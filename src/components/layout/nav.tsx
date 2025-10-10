@@ -31,7 +31,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`px-5 md:px-20 py-4 md:py-7 flex items-center justify-between fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`px-5 md:px-20 py-4 md:py-7 flex items-center max-w-[1800px] mx-auto justify-between fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm"
           : "bg-transparent"

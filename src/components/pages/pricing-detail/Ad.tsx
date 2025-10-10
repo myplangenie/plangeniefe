@@ -5,20 +5,14 @@ import AdImg from "@/images/ad.svg";
 
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
+import EnterpriseImg from "../home/EnhanceImg";
 
 
 export default function Ad() {
   return (
     <div className="bg-[#F3F8FF] py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
       <div>
-        <Image
-          src={AdImg}
-          alt="thumb"
-          quality={100}
-          width={100}
-          height={100}
-          className="w-full h-auto"
-        />
+        <EnterpriseImg />
       </div>
       <div className="font-manrope">
         <h3 className="text-3xl sm:text-4xl mb-5 font-bold leading-snug">
