@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Testimonial = { quote: string; author: string };
@@ -69,7 +69,7 @@ export default function Testimonials() {
   const [paused, setPaused] = useState(false);
   const wrapRef = useRef<HTMLDivElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const itemRefs = useRef<HTMLDivElement[]>([]);
+  const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   const max = testimonials.length - 1;
 
@@ -125,7 +125,9 @@ export default function Testimonials() {
                 return (
                   <div
                     key={i}
-                    ref={(el) => el && (itemRefs.current[i] = el)}
+                    ref={(el) => {
+                      itemRefs.current[i] = el;
+                    }}
                     className="snap-center shrink-0 flex-[0_0_100%] md:flex-[0_0_33.333%]"
                   >
                     <article className="rounded-[8px] border border-[#12141D]/10 bg-white p-5 shadow-sm h-full flex flex-col">
