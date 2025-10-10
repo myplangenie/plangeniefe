@@ -9,9 +9,9 @@ import SecImg from "@/images/hero/sec.svg";
 import Sec2Img from "@/images/hero/sec2.svg";
 
 import _1Img from "@/images/hero/_1.svg";
-import _2Img from "@/images/hero/_2.png";
-import _3Img from "@/images/hero/_3.png";
-import _4Img from "@/images/hero/_4.png";
+import _2Img from "@/images/hero/_2.svg";
+import _3Img from "@/images/hero/_3.svg";
+import _4Img from "@/images/hero/_4.svg";
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -122,7 +122,7 @@ export default function HomeHero() {
                 quality={100}
                 width={1000}
                 height={1000}
-                className="w-full h-auto"
+                className="w-full h-auto object-cover object-center"
               />
               <Image
                 src={MarkImg}
@@ -140,7 +140,7 @@ export default function HomeHero() {
                 quality={100}
                 width={1000}
                 height={1000}
-                className="w-full h-auto -mt-12"
+                className="w-full h-auto object-cover object-center -mt-12"
               />
               <Image
                 src={ArrowImg}
@@ -158,7 +158,7 @@ export default function HomeHero() {
                 quality={100}
                 width={1000}
                 height={1000}
-                className="w-full h-auto"
+                className="w-full h-auto object-cover object-center"
               />
             </div>
             <div className="relative hero-card">
@@ -168,7 +168,7 @@ export default function HomeHero() {
                 quality={100}
                 width={1000}
                 height={1000}
-                className="w-full h-auto -mt-12"
+                className="w-full h-auto object-cover object-center -mt-12"
               />
               <div className="absolute -bottom-5 w-full">
                 <Image
