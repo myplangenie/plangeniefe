@@ -129,15 +129,27 @@
 
 body {
   color: #12141D;
-  font-family: var(--font-lato);
+  font-family: var(--font-manrope);
   overflow-x: hidden;
   max-width: 1800px;
   margin: 0px auto;
 }
 
 .ant-divider-inner-text {
-  font-family: var(--font-lato) !important;
+  font-family: var(--font-manrope) !important;
 }
+
+/* Force all explicit font utility classes to Manrope for consistency */
+.font-space-grotesk,
+.font-sans,
+.font-mono,
+.font-geist-sans,
+.font-geist-mono,
+.font-lato {
+  font-family: var(--font-manrope) !important;
+}
+
+/* (Removed global heading overrides per request) */
 
 .onboarding {
   background: url('/images/auth.png');

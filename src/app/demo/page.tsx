@@ -86,7 +86,7 @@ const RequestDemo = () => {
                   <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
                     <FaCheck className="text-[10px] text-accent" />
                   </div>{" "}
-                  Plans built in minutes, not weeks
+                  Actionable plans built in minutes
                 </li>
                 <li className="flex items-center font-manrope text-base gap-2">
                   <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
@@ -98,13 +98,7 @@ const RequestDemo = () => {
                   <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
                     <FaCheck className="text-[10px] text-accent" />
                   </div>{" "}
-                  Trusted by top business coaches
-                </li>
-                <li className="flex items-center font-manrope text-base gap-2">
-                  <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
-                    <FaCheck className="text-[10px] text-accent" />
-                  </div>{" "}
-                  Expert-level strategy guidance
+                  Trusted by top business leaders
                 </li>
               </ul>
             </div>
