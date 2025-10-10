@@ -4,14 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 import AdImg from "@/images/ad.svg";
-import AbtImg from "@/images/abt.png";
+import AbtImg from "@/images/people.png";
 
 import MckinsleyImg from "@/images/mckinsey.png";
 import MicrosoftImg from "@/images/microsoft.png";
 import TecImg from "@/images/tec.png";
-
-import { IoIosArrowUp } from "react-icons/io";
-import { IoIosArrowDown } from "react-icons/io";
 
 export default function OurFounders() {
   const items = [
@@ -89,8 +86,8 @@ export default function OurFounders() {
             src={AbtImg}
             alt="about us"
             quality={100}
-            width={100}
-            height={100}
+            width={1000}
+            height={1000}
             className="w-full h-auto rounded-[24px]"
           />
         </div>

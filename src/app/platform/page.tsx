@@ -12,7 +12,7 @@ const Platform = () => {
       <PlatformHero />
       <PlatformPillars />
       <PricingSect />
-      {/* <PlatformCarousel /> */}
+      <PlatformCarousel />
       <Testimonials />
     </DisplayLayout>
   );
