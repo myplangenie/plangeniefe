@@ -34,8 +34,7 @@ export default function FeaturedArticlesClient({
             <Image
               src={current.cover || ""}
               alt={current?.title || "Blog cover"}
-              width={1200}
-              height={800}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="min-h-[25rem] h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
               priority
             />

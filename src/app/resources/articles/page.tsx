@@ -24,7 +24,12 @@ export default async function ArticlesIndex() {
         <ul className="mt-8 grid sm:grid-cols-2 gap-6">
           {articles.map((a) => (
             <li key={a.slug} className="border rounded-xl bg-white shadow-sm overflow-hidden">
-              <Image src={(a.cover ? (a.cover as any) : CoverImg) as any} alt={a.title} width={1200} height={700} className="w-full h-48 object-cover" />
+              <Image
+                src={(a.cover ? (a.cover as any) : CoverImg) as any}
+                alt={a.title}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="w-full h-48 object-cover"
+              />
               <div className="p-5">
               <h3 className="text-lg font-semibold">
                 <Link href={`/resources/articles/${a.slug}`} className="hover:underline">

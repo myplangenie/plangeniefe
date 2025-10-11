@@ -70,8 +70,7 @@ export default async function ArticlePage({ params }: Props) {
             <Image
               src={(article.cover ? (article.cover as any) : "/blog/relationship.jpg") as any}
               alt={article.title}
-              width={1200}
-              height={800}
+              sizes="(max-width: 768px) 100vw, 768px"
               className="w-full h-auto rounded-xl shadow-lg ring-1 ring-black/10"
               priority
             />
