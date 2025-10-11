@@ -23,7 +23,7 @@ import FlowerImg from "@/images/hero/flower.svg";
 
 import CurveImg from "@/images/hero/curve-sec.svg";
 
-import Image from "next/image";
+// Using native <img> for hero visuals per request
 
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
@@ -128,72 +128,68 @@ export default function HomeHero() {
         <div className="relative">
           <div className="order-first grid grid-cols-4 md:order-none image-box z-30 relative">
             <div className="relative hero-card">
-              <Image
-                src={_1Img}
+              <img
+                src={_1Img.src}
                 alt="alt main"
-                quality={100}
-                sizes="(max-width: 768px) 100vw, 400px"
+                loading="eager"
+                decoding="async"
                 className="w-full h-auto object-cover object-center"
               />
-              <Image
-                src={MarkImg}
+              <img
+                src={MarkImg.src}
                 alt="alt main"
-                quality={100}
-                sizes="(max-width: 768px) 24vw, 100px"
                 className="w-[30px] h-auto absolute -top-6 -left-5 hero-deco"
+                decoding="async"
               />
             </div>
             <div className="relative hero-card">
-              <Image
-                src={_2Img}
+              <img
+                src={_2Img.src}
                 alt="alt main"
-                quality={100}
-                sizes="(max-width: 768px) 100vw, 400px"
+                loading="eager"
+                decoding="async"
                 className="w-full h-auto object-cover object-center -mt-12"
               />
-              <Image
-                src={ArrowImg}
+              <img
+                src={ArrowImg.src}
                 alt="alt main"
-                quality={100}
-                sizes="(max-width: 768px) 100vw, 400px"
                 className="absolute bottom-0 w-full hero-deco"
+                decoding="async"
               />
             </div>
             <div className="hero-card">
-              <Image
-                src={_3Img}
+              <img
+                src={_3Img.src}
                 alt="alt main"
-                quality={100}
-                sizes="(max-width: 768px) 100vw, 400px"
+                loading="eager"
+                decoding="async"
                 className="w-full h-auto object-cover object-center"
               />
             </div>
             <div className="relative hero-card">
-              <Image
-                src={_4Img}
+              <img
+                src={_4Img.src}
                 alt="alt main"
-                quality={100}
-                sizes="(max-width: 768px) 100vw, 400px"
+                loading="eager"
+                decoding="async"
                 className="w-full h-auto object-cover object-center -mt-12"
               />
               <div className="absolute -bottom-5 w-full">
-                <Image
-                  src={FlowerImg}
+                <img
+                  src={FlowerImg.src}
                   alt="alt main"
-                  quality={100}
-                  sizes="(max-width: 768px) 24vw, 100px"
                   className="w-[70px] mx-auto block hero-deco"
+                  decoding="async"
                 />
               </div>
             </div>
           </div>
           <div className="w-full absolute inset-0 -top-20 z-10 hero-deco">
-            <Image
-              src={CurveImg}
+            <img
+              src={CurveImg.src}
               alt="alt main"
-              quality={100}
-              sizes="100vw"
               className="w-full h- [40rem] mx-auto block"
+              decoding="async"
             />
           </div>
         </div>
