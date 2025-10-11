@@ -60,7 +60,7 @@ export default function HomeHero() {
       className="relative hero-bg pt-32 sm:pt-40 md:pt-52 pb-40 sm:pb-20 md:pb-24 text-white"
       ref={scope}
     >
-      <div className="flex flex-col md:grid md:grid-cols-[1.2fr_1fr] items-center gap-28 md:gap-14 px-5 sm:px-10 md:px-20">
+      <div className="max-w-[1800px] mx-auto flex flex-col md:grid md:grid-cols-[1.2fr_1fr] items-center gap-28 md:gap-14 px-5 sm:px-10 md:px-20">
         <div className="flex flex-col gap-2 md:gap-4">
           <ul className="hidden text-xs sm:text-sm opacity-80 mb-5 md:flex gap-4 flex-wrap">
             <li className="flex items-center font-manrope font-bold text-sm gap-2">

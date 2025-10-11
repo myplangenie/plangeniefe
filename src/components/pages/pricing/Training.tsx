@@ -8,7 +8,7 @@ export default function PricingTraining() {
         <h2 className="text-xl sm:text-4xl font-bold text-gray-900">
           Live Training & Facilitation Services
         </h2>
-        <p className="mt-5 text-base leading-loose text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-2 md:mt-5 text-base leading-loose text-gray-600 max-w-2xl mx-auto">
           We provide a flexible suite of live training and facilitation options
           to help organizations and individuals bring their plans to life.
         </p>
@@ -16,7 +16,7 @@ export default function PricingTraining() {
 
       <div className="mt-6 grid md:grid-cols-2 text-center gap-4 sm:gap-6">
         <div className="rounded-lg bg-[#FAFAFA] px-5 py-12">
-          <h3 className="font-semibold text-3xl mb-3 text-gray-900 font-manrope">
+          <h3 className="font-semibold text-xl md:text-3xl mb-3 text-gray-900 font-manrope">
             Strategy Sprints
           </h3>
           <p className="mt-1 text-base leading-relaxed w-full sm:w-[80%] md:w-[65%] mx-auto text-gray-600">
@@ -33,7 +33,7 @@ export default function PricingTraining() {
           </div>
         </div>
         <div className="rounded-lg bg-[#FAFAFA] px-5 py-12">
-          <h3 className="font-semibold text-3xl mb-3 text-gray-900 font-manrope">
+          <h3 className="font-semibold text-xl md:text-3xl mb-3 text-gray-900 font-manrope">
             Ongoing Coaching Packages
           </h3>
           <p className="mt-1 text-base leading-relaxed w-full sm:w-[80%] md:w-[65%] mx-auto text-gray-600">
@@ -50,7 +50,7 @@ export default function PricingTraining() {
           </div>
         </div>
         <div className="rounded-lg bg-[#FAFAFA] px-5 py-12">
-          <h3 className="font-semibold text-3xl mb-3 text-gray-900 font-manrope">
+          <h3 className="font-semibold text-xl md:text-3xl mb-3 text-gray-900 font-manrope">
             Workshop Facilitation
           </h3>
           <p className="mt-1 text-base leading-relaxed w-full sm:w-[80%] md:w-[65%] mx-auto text-gray-600">
@@ -67,7 +67,7 @@ export default function PricingTraining() {
           </div>
         </div>
         <div className="rounded-lg bg-[#FAFAFA] px-5 py-12">
-          <h3 className="font-semibold text-3xl mb-3 text-gray-900 font-manrope">
+          <h3 className="font-semibold text-xl md:text-3xl mb-3 text-gray-900 font-manrope">
             Train-the-Trainer Programs
           </h3>
           <p className="mt-1 text-base leading-relaxed w-full sm:w-[80%] md:w-[65%] mx-auto text-gray-600">

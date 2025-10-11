@@ -97,7 +97,7 @@ export default function PricingSect() {
   }, [annual]);
 
   return (
-    <section className="px-5 sm:px-10 md:px-20 mx-auto w-full mt-10 sm:mt-12">
+    <section className="max-w-[1800px] mx-auto px-5 sm:px-10 md:px-20 w-full mt-10 sm:mt-12">
       {/* Billing toggle */}
       <div className="relative w-max mx-auto mb-10 sm:mb-16 mt-10 sm:mt-20">
         <div className="bg-accent rounded-full !p-1 flex items-center gap-1 relative select-none">
@@ -235,7 +235,7 @@ export default function PricingSect() {
               <div className="absolute bottom-5 left-0 px-5 w-full">
                 <Link
                   href="/demo"
-                  className={`border block text-center py-1 rounded-lg border-solid ${
+                  className={`border block text-center text-sm py-3 md:py-1 rounded-lg border-solid ${
                     plan.name === "Prime"
                       ? "bg-white border-white text-[#1a1a1a] hover:bg-accent/90 hover:border-none hover:text-white"
                       : "bg-white text-black border-[#E1E1E1] hover:bg-primary/90 hover:text-white"

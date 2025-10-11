@@ -61,83 +61,92 @@ export default function Enhance() {
     setOpenIndex((prev) => (prev === idx ? null : idx));
 
   return (
-    <div ref={rootRef} className="enterprise py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 mt-16 md:mt-24 items-center">
-      <div className="relative">
-        <div
-          style={{ willChange: "transform, opacity" }}
-          className={`transition-all duration-700 ease-out ${
-            showMain ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-[0.98] translate-y-1"
-          }`}
-        >
-          <Image
-            src={FrameImg}
-            alt="thumb"
-            quality={100}
-            width={100}
-            height={100}
-            className="w-full h-auto"
-          />
+    <div className="enterprise">
+      <div
+        ref={rootRef}
+        className="max-w-[1800px] mx-auto py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 mt-16 md:mt-24 items-center"
+      >
+        <div className="relative">
+          <div
+            style={{ willChange: "transform, opacity" }}
+            className={`transition-all duration-700 ease-out ${
+              showMain
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-[0.98] translate-y-1"
+            }`}
+          >
+            <Image
+              src={FrameImg}
+              alt="thumb"
+              quality={100}
+              width={100}
+              height={100}
+              className="w-full h-auto"
+            />
+          </div>
+          <div
+            style={{ willChange: "transform, opacity" }}
+            className={`hidden md:block absolute top-[35%] -right-7 md:-right-20 w-full max-w-[300px] transition-all duration-700 ease-out ${
+              showOverlay
+                ? "opacity-100 scale-100 translate-y-0"
+                : "opacity-0 scale-[0.98] translate-y-1"
+            }`}
+          >
+            <Image
+              src={InvoiceImg}
+              alt="invoice"
+              quality={100}
+              width={100}
+              height={100}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
-        <div
-          style={{ willChange: "transform, opacity" }}
-          className={`absolute top-[35%] -right-7 md:-right-20 w-full max-w-[300px] transition-all duration-700 ease-out ${
-            showOverlay ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-[0.98] translate-y-1"
-          }`}
-        >
-          <Image
-            src={InvoiceImg}
-            alt="invoice"
-            quality={100}
-            width={100}
-            height={100}
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
-      <div className="font-manrope text-white">
-        <h3 className="text-3xl md:text-4xl mb-3 font-bold leading-[1.3] md:w-[80%]">
-          Enhance & scale your business experience
-        </h3>
-        <p className="text-sm md:text-base mb-3 leading-loose w-full md:w-[85%] max-w-[572px]">
-          Whether you are launching a startup, coaching businesses, leading a
-          team, Plan Genie is designed to work the way you think.
-        </p>
-        <div className="flex flex-col w-full md:w-[90%]">
-          {items.map((item, idx) => (
-            <div key={idx}>
-              <button
-                type="button"
-                className="w-full flex items-start gap-1 md:gap-4 py-4 md:py-5 cursor-pointer text-left"
-                aria-expanded={openIndex === idx}
-                onClick={() => toggle(idx)}
-              >
-                {openIndex === idx ? (
-                  <IoIosArrowUp className="text-xl md:text-2xl shrink-0 mt-0.5" />
-                ) : (
-                  <IoIosArrowDown className="text-xl md:text-2xl shrink-0 mt-0.5" />
-                )}
-                <h5 className="font-manrope md:font-black text-sm md:text-base">
-                  {item.title}
-                </h5>
-              </button>
-              <div
-                className={`overflow-hidden transition-[max-height,opacity,margin] duration-300 ease-out ${
-                  openIndex === idx
-                    ? "max-h-[300px] opacity-100 mt-1"
-                    : "max-h-0 opacity-0 mt-0"
-                }`}
-              >
-                <div className="pr-2">
-                  <p className="text-sm leading-relaxed text-white/85">
-                    {item.content}
-                  </p>
+        <div className="font-manrope text-white">
+          <h3 className="text-3xl md:text-4xl mb-3 font-bold leading-[1.3] md:w-[80%]">
+            Enhance & scale your business experience
+          </h3>
+          <p className="text-sm md:text-base mb-3 leading-loose w-full md:w-[85%] max-w-[572px]">
+            Whether you are launching a startup, coaching businesses, leading a
+            team, Plan Genie is designed to work the way you think.
+          </p>
+          <div className="flex flex-col w-full md:w-[90%]">
+            {items.map((item, idx) => (
+              <div key={idx}>
+                <button
+                  type="button"
+                  className="w-full flex items-start gap-1 md:gap-4 py-4 md:py-5 cursor-pointer text-left"
+                  aria-expanded={openIndex === idx}
+                  onClick={() => toggle(idx)}
+                >
+                  {openIndex === idx ? (
+                    <IoIosArrowUp className="text-xl md:text-2xl shrink-0 mt-0.5" />
+                  ) : (
+                    <IoIosArrowDown className="text-xl md:text-2xl shrink-0 mt-0.5" />
+                  )}
+                  <h5 className="font-manrope md:font-black text-sm md:text-base">
+                    {item.title}
+                  </h5>
+                </button>
+                <div
+                  className={`overflow-hidden transition-[max-height,opacity,margin] duration-300 ease-out ${
+                    openIndex === idx
+                      ? "max-h-[300px] opacity-100 mt-1"
+                      : "max-h-0 opacity-0 mt-0"
+                  }`}
+                >
+                  <div className="pr-2">
+                    <p className="text-sm leading-relaxed text-white/85">
+                      {item.content}
+                    </p>
+                  </div>
                 </div>
+                {idx !== items.length - 1 && (
+                  <div className="h-[2px] w-full border-solid bg-[#12141D] opacity-10" />
+                )}
               </div>
-              {idx !== items.length - 1 && (
-                <div className="h-[2px] w-full border-solid bg-[#12141D] opacity-10" />
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

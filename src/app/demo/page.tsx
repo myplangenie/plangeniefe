@@ -68,14 +68,14 @@ const RequestDemo = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-12 items-center">
             {/* Left - Heading and imagery */}
             <div className="md:col-span-6">
-              <h1 className="text-white font-bold font-manrope text-4xl sm:text-5xl md:text-5xl leading-tight tracking-tight">
+              <h1 className="text-white font-bold font-manrope text-3xl sm:text-5xl md:text-5xl leading-tight tracking-tight">
                 Get a Free 30-Minute
                 <br /> Personalized Demo
               </h1>
               <div className="mt-20">
                 <HeroImage variant="compact" />
               </div>
-              <p className="mt-4 text-lg text-white font-manrope max-w-xl leading-loose md:mb-5">
+              <p className="mt-4 text-sm md:text-lg text-white font-manrope max-w-xl leading-loose md:mb-5">
                 Get a guided tour with our experts to explore the
                 platform&apos;s features, pricing, and more tailored to your
                 business needs. See it in action and discover its potential for
@@ -106,7 +106,7 @@ const RequestDemo = () => {
             {/* Right - Form card */}
             <div className="md:col-span-6">
               <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-8 shadow-sm">
-                <h2 className="text-2xl md:text-2xl font-manrope text-black mb-6">
+                <h2 className="text-xl md:text-2xl font-manrope text-black mb-6">
                   Request Your Free Demo
                 </h2>
                 <form onSubmit={handleSubmit(onSubmit)} noValidate>

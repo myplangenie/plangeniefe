@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export const ListingsSupport = () => {
   return (
-    <section className="mx-auto w-full mt-10 md:mt-28 px-5 sm:px-10 md:px-20">
+    <section className="max-w-[1800px] mx-auto w-full mt-10 md:mt-28 px-5 sm:px-10 md:px-20">
       <div className="bg-[#FAFAFA] p-6 sm:p-10 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-8 rounded-[16px]">
         <div>
           <h2 className="text-xl sm:text-3xl font-bold text-gray-900">

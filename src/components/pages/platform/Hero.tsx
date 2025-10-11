@@ -28,7 +28,7 @@ const PlatformHero = () => {
             Trusted by top business leaders
           </li>
         </ul>
-        <h2 className="text-3xl sm:text-4xl md:text-6xl font-manrope !leading-[1.3] font-black mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-manrope !leading-[1.3] font-black mb-3 md:mb-6">
           The Only <span className="text-accent">Planning System</span> That
           Thinks With You
         </h2>

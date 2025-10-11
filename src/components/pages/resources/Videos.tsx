@@ -91,7 +91,7 @@ export default function VideoTutorials() {
       </div>
 
       <div className="flex justify-center mt-14">
-        <Link href="https://www.youtube.com/channel/UCZwy2TtFTcpHJ_jQBLg5YlA" target="_blank" rel="noreferrer" className="text-sm px-7 py-3 text-accent font-manrope font-bold flex items-center gap-2 border-2 rounded-[10px] border-accent bg-white shadow-sm hover:bg-gray-50">More articles <HiArrowSmRight className="text-xl" /></Link>
+        <Link href="https://www.youtube.com/channel/UCZwy2TtFTcpHJ_jQBLg5YlA" target="_blank" rel="noreferrer" className="text-sm px-7 py-3 text-accent font-manrope font-bold flex items-center gap-2 border-2 rounded-[10px] border-accent bg-white shadow-sm hover:bg-gray-50">More Resources <HiArrowSmRight className="text-xl" /></Link>
       </div>
     </section>
   );

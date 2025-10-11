@@ -42,7 +42,7 @@ export default async function ArticlePage({ params }: Props) {
     <DisplayLayout>
       <>
         <header className="bg-primary pt-48 pb-28 text-white">
-          <div className="max-w-7xl mx-auto">
+          <div className="md:max-w-7xl mx-auto">
             <div className="flex flex-col items-center text-center gap-4">
               <div className="flex w-max items-center gap-7 mb-4">
                 <Link href="/resources" className="text-sm text-white">
@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: Props) {
                   : null}
                 </p>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl w-[60%] mx-auto leading-[1.2] font-extrabold font-manrope tracking-tight mb-3 md:mb-7">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl md:w-[60%] mx-auto leading-[1.2] font-extrabold font-manrope tracking-tight mb-3 md:mb-7">
                 {article.title}
               </h1>
               {/* <p className="text-xl opacity-70 font-manrope">
@@ -78,7 +78,7 @@ export default async function ArticlePage({ params }: Props) {
           </div>
         </div>
 
-        <article className="max-w-3xl mx-auto px-5 md:px-8 py-20 font-manrope">
+        <article className="max-w-3xl mx-auto px-5 md:px-8 py-14 md:py-16 font-manrope">
           <div className="prose prose-neutral">
             {article.html ? (
               <div dangerouslySetInnerHTML={{ __html: article.html }} />

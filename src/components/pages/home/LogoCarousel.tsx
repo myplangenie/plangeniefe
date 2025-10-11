@@ -68,7 +68,7 @@ export default function LogoCarousel() {
 
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-5 md:px-20 py-10">
+      <div className="mx-auto px-5 md:px-20 py-10">
         <div className="text-center mb-8 md:mb-10">
           <h2 className="font-manrope font-extrabold text-lg sm:text-xl md:text-2xl text-[#1E2C22] md:w-[60%] mx-auto leading-relaxed">
             {/* Powering a global community of changemakers and innovators. */}

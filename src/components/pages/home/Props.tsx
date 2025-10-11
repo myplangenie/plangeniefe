@@ -50,8 +50,8 @@ export default function Props() {
               SME Leaders
             </h3>
             <p className="mt-1 text-sm md:text-base leading-loose text-[#58595F] font-manrope">
-              Plan across departments, unify execution, and forecast
-              confidently. Prime includes forecasting, dashboards, and coaching
+              Bring clarity and alignment across teams with one intelligent
+              planning platform that connects vision to measurable results.
             </p>
           </div>
           <div className="rounded-[17px] border border-solid border-[#00000008] bg-transparent px-5 py-7">
@@ -71,8 +71,8 @@ export default function Props() {
               Startup Founders
             </h3>
             <p className="mt-1 text-sm md:text-base leading-loose text-[#58595F]">
-              Structure your startup story for investors, mentors, and team.
-              Lite to Prime scales as you do.
+              Turn ideas into investor-ready plans with AI-powered structure,
+              clear milestones, and built-in accountability.
             </p>
           </div>
           <div className="rounded-[17px] border border-solid border-[#00000008] bg-transparent px-5 py-7">
@@ -92,9 +92,8 @@ export default function Props() {
               Social Purpose Organizations
             </h3>
             <p className="mt-1 text-sm md:text-[15px] leading-loose text-[#58595F]">
-              Articulate vision, theory of change, and revenue logic for board
-              members and funders. Comes with nonprofit templates and
-              facilitator support.
+              Translate mission into impact with tools that help you plan
+              programs, secure funding, and track measurable outcomes.
             </p>
           </div>
           <div className="rounded-[17px] border border-solid border-[#00000008] bg-transparent px-5 py-7">
@@ -111,11 +110,11 @@ export default function Props() {
               </div>
             </div>
             <h3 className="font-black text-lg md:text-xl mb-3 text-[#183B56] font-manrope">
-              Consultants & Coaches
+              Coaches and Consultants
             </h3>
             <p className="mt-1 text-sm md:text-base leading-loose text-[#58595F]">
-              License and white-label the planning engine. Offer structure,
-              track progress, and scale your methodology.
+              Guide clients through structured, interactive planning sessions
+              that turn insight into sustainable growth.
             </p>
           </div>
           <div className="rounded-[17px] border border-solid border-[#00000008] bg-transparent px-5 py-7">
@@ -132,11 +131,11 @@ export default function Props() {
               </div>
             </div>
             <h3 className="font-black text-lg md:text-xl mb-3 text-[#183B56] font-manrope">
-              Institutions & Accelerators
+              Educators and Institutions
             </h3>
             <p className="mt-1 text-sm md:text-base leading-loose text-[#58595F]">
-              Equip your students or cohort with planning software + guided
-              curriculum. Real-world learning for entrepreneurs.
+              Teach strategy and entrepreneurship through hands-on business
+              planning that connects theory with real-world results.
             </p>
           </div>
           <div className="rounded-[17px] border border-solid border-[#00000008] bg-transparent px-5 py-7">
@@ -153,11 +152,11 @@ export default function Props() {
               </div>
             </div>
             <h3 className="font-black text-lg md:text-xl mb-3 text-[#183B56] font-manrope">
-              Individuals & Life Planners
+              Individuals and Life Planners
             </h3>
             <p className="mt-1 text-sm md:text-base leading-loose text-[#58595F]">
-              Redesign your life with focus, alignment, and a practical path
-              forward.
+              Create a personal roadmap for growth with smart prompts and tools
+              that turn your goals into focused, achievable steps.
             </p>
           </div>
         </div>

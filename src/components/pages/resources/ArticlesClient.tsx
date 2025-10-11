@@ -29,20 +29,20 @@ export default function FeaturedArticlesClient({
 
       <div className="relative mt-7 md:mt-14">
         {/* gap-8 rounded-2xl items-center border-2 border-solid border-[#E5EAF4] */}
-        <div className="overflow-visible grid md:grid-cols-[1.2fr_1fr] relative border border-solid border-[#E5EAF4] rounded-2xl h-[440px]">
+        <div className="overflow-visible grid md:grid-cols-[1.2fr_1fr] relative border border-solid border-[#E5EAF4] rounded-2xl md:h-[440px]">
           <div className="relative overflow-visible">
             <Image
               src={current.cover || ""}
               alt={current?.title || "Blog cover"}
               width={1200}
               height={800}
-              className="min-h-[25rem] h-full w-full object-cover rounded-l-xl"
+              className="min-h-[25rem] h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
               priority
             />
           </div>
           <div>
             <article className="relative p-4 md:p-10 h-max">
-              <span className="inline-block text-[10px] tracking-wide font-semibold bg-[#EAF2FF] text-[#1D4374] px-3 py-1 rounded-full mb-20">
+              <span className="inline-block text-[10px] tracking-wide font-semibold bg-[#EAF2FF] text-[#1D4374] px-3 py-1 rounded-full mb-5 md:mb-20">
                 FEATURED
               </span>
               <h3 className="text-2xl sm:text-2xl md:text-4xl font-extrabold leading-[1.3] text-[#17324F]">
@@ -53,7 +53,7 @@ export default function FeaturedArticlesClient({
                   {current.title}
                 </Link>
               </h3>
-              <div className="mt-14 flex items-center justify-between">
+              <div className="mt-8 md:mt-14 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="size-14 rounded-full bg-[#C4C4C4] inline-block" />
                   <div className="text-sm">

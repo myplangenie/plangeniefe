@@ -131,8 +131,6 @@ body {
   color: #12141D;
   font-family: var(--font-manrope);
   overflow-x: hidden;
-  max-width: 1800px;
-  margin: 0px auto;
 }
 
 .ant-divider-inner-text {

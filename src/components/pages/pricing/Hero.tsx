@@ -25,7 +25,7 @@ export default function SiteHero() {
               Trusted by top business coaches
             </li>
           </ul>
-          <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold font-manrope tracking-tight mb-3 md:mb-7">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold font-manrope tracking-tight mb-1 md:mb-7">
             Pricing That <span className="text-accent">Grows</span> With You
           </h1>
           <p className="text-xl opacity-70 font-manrope">

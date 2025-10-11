@@ -6,7 +6,7 @@ const Story = () => {
   const embed = `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&controls=1&playsinline=1`;
   return (
     <section className="mt-10 md:mt-16 bg-[#FAFAFA]">
-      <div className="mx-auto ">
+      <div className="max-w-[1800px] mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left: Bio */}
           <div className=" rounded-lg px-5 pb-10 pt-0 md:p-20">

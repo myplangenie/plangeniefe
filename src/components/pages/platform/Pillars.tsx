@@ -41,9 +41,9 @@ const PlatformPillars = () => {
     },
   ];
   return (
-    <section className="bg-[#FAFAFA] font-manrope pt-16 sm:pt-24 pb-20 sm:pb-32">
+    <section className="bg-[#FAFAFA] font-manrope pt-20 sm:pt-24 pb-20 sm:pb-32">
       <div>
-        <h3 className="text-3xl sm:text-4xl text-center mb-8 sm:mb-14 font-space-grotesk font-black">
+        <h3 className="text-2xl md:text-4xl text-center mb-4 sm:mb-14 font-space-grotesk font-black">
           Platform Pillars
         </h3>
       </div>

@@ -30,38 +30,39 @@ const Navigation = () => {
     `!text-[15px] ${linkBase}${isActive(href) ? " text-accent" : linkColor}`;
 
   return (
-    <nav
-      className={`px-5 md:px-20 py-4 md:py-7 flex items-center max-w-[1800px] mx-auto justify-between fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <div>
-        <Link href="/">
-          <Image
-            src={scrolled ? LogoDark : LogoWhite}
-            alt="Plangenie"
-            width={1000}
-            height={1000}
-            quality={100}
-            className="w-[160px] h-auto max-w-[160px] object-cover object-center"
-          />
-        </Link>
-      </div>
-      {/* Desktop nav */}
-      <div className="hidden md:block">
-        <ul className="flex items-center gap-10 text-[15px]">
-          <li>
-            <Link
-              href="/platform"
-              aria-current={isActive("/platform") ? "page" : undefined}
-              className={linkClasses("/platform")}
-            >
-              Platform
-            </Link>
-          </li>
-          {/* <li>
+    <div className="max-w-[1800px] mx-auto">
+      <nav
+        className={`px-5 md:px-20 py-4 md:py-7 max-w-[1800px] mx-auto flex items-center justify-between fixed top-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
+        <div>
+          <Link href="/">
+            <Image
+              src={scrolled ? LogoDark : LogoWhite}
+              alt="Plangenie"
+              width={1000}
+              height={1000}
+              quality={100}
+              className="w-[160px] h-auto max-w-[160px] object-cover object-center"
+            />
+          </Link>
+        </div>
+        {/* Desktop nav */}
+        <div className="hidden md:block">
+          <ul className="flex items-center gap-10 text-[15px]">
+            <li>
+              <Link
+                href="/platform"
+                aria-current={isActive("/platform") ? "page" : undefined}
+                className={linkClasses("/platform")}
+              >
+                Platform
+              </Link>
+            </li>
+            {/* <li>
             <Link
               href="/solutions"
               aria-current={isActive("/solutions") ? "page" : undefined}
@@ -70,74 +71,74 @@ const Navigation = () => {
               Solutions
             </Link>
           </li> */}
-          <li>
-            <Link
-              href="/pricing"
-              aria-current={isActive("/pricing") ? "page" : undefined}
-              className={linkClasses("/pricing")}
-            >
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/resources"
-              aria-current={isActive("/resources") ? "page" : undefined}
-              className={linkClasses("/resources")}
-            >
-              Resources
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/about-us"
-              aria-current={isActive("/about-us") ? "page" : undefined}
-              className={linkClasses("/about-us")}
-            >
-              About
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="hidden md:block">
-        <Link
-          href="/demo"
-          className="font-manrope font-medium text-white text-sm hover:text-accent mr-6 bg-accent px-8 py-4 rounded-[8px]"
+            <li>
+              <Link
+                href="/pricing"
+                aria-current={isActive("/pricing") ? "page" : undefined}
+                className={linkClasses("/pricing")}
+              >
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/resources"
+                aria-current={isActive("/resources") ? "page" : undefined}
+                className={linkClasses("/resources")}
+              >
+                Resources
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about-us"
+                aria-current={isActive("/about-us") ? "page" : undefined}
+                className={linkClasses("/about-us")}
+              >
+                About
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="hidden md:block">
+          <Link
+            href="/demo"
+            className="font-manrope font-medium text-white text-sm hover:text-accent mr-6 bg-accent px-8 py-4 rounded-[8px]"
+          >
+            Request Demo
+          </Link>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          className={`md:hidden inline-flex items-center justify-center rounded-md p-2 ${
+            scrolled ? "text-[#12141D]" : "text-white"
+          }`}
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
         >
-          Request Demo
-        </Link>
-      </div>
+          {open ? <X className="size-6" /> : <Menu className="size-6" />}
+        </button>
 
-      {/* Mobile toggle */}
-      <button
-        className={`md:hidden inline-flex items-center justify-center rounded-md p-2 ${
-          scrolled ? "text-[#12141D]" : "text-white"
-        }`}
-        aria-label="Toggle navigation"
-        aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
-      >
-        {open ? <X className="size-6" /> : <Menu className="size-6" />}
-      </button>
-
-      {/* Mobile menu panel */}
-      {open && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
-          <div className="px-5 py-4">
-            <ul className="flex flex-col gap-4">
-              <li>
-                <Link
-                  href="/platform"
-                  aria-current={isActive("/platform") ? "page" : undefined}
-                  className={`block hover:text-accent ${
-                    isActive("/platform") ? "text-accent" : "text-[#12141D]"
-                  }`}
-                  onClick={() => setOpen(false)}
-                >
-                  Platform
-                </Link>
-              </li>
-              {/* <li>
+        {/* Mobile menu panel */}
+        {open && (
+          <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
+            <div className="px-5 py-4">
+              <ul className="flex flex-col gap-4">
+                <li>
+                  <Link
+                    href="/platform"
+                    aria-current={isActive("/platform") ? "page" : undefined}
+                    className={`block hover:text-accent ${
+                      isActive("/platform") ? "text-accent" : "text-[#12141D]"
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    Platform
+                  </Link>
+                </li>
+                {/* <li>
                 <Link
                   href="/solutions"
                   aria-current={isActive("/solutions") ? "page" : undefined}
@@ -149,56 +150,57 @@ const Navigation = () => {
                   Solutions
                 </Link>
               </li> */}
-              <li>
+                <li>
+                  <Link
+                    href="/pricing"
+                    aria-current={isActive("/pricing") ? "page" : undefined}
+                    className={`block hover:text-accent ${
+                      isActive("/pricing") ? "text-accent" : "text-[#12141D]"
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/resources"
+                    aria-current={isActive("/resources") ? "page" : undefined}
+                    className={`block hover:text-accent ${
+                      isActive("/resources") ? "text-accent" : "text-[#12141D]"
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    Resources
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about-us"
+                    aria-current={isActive("/about-us") ? "page" : undefined}
+                    className={`block hover:text-accent ${
+                      isActive("/about-us") ? "text-accent" : "text-[#12141D]"
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    About
+                  </Link>
+                </li>
+              </ul>
+              <div className="mt-4">
                 <Link
-                  href="/pricing"
-                  aria-current={isActive("/pricing") ? "page" : undefined}
-                  className={`block hover:text-accent ${
-                    isActive("/pricing") ? "text-accent" : "text-[#12141D]"
-                  }`}
+                  href="/demo"
                   onClick={() => setOpen(false)}
+                  className="inline-flex w-full items-center justify-center font-manrope font-medium text-sm bg-accent text-white px-5 py-3 rounded-[8px] hover:!text-white"
                 >
-                  Pricing
+                  Request Demo
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources"
-                  aria-current={isActive("/resources") ? "page" : undefined}
-                  className={`block hover:text-accent ${
-                    isActive("/resources") ? "text-accent" : "text-[#12141D]"
-                  }`}
-                  onClick={() => setOpen(false)}
-                >
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about-us"
-                  aria-current={isActive("/about-us") ? "page" : undefined}
-                  className={`block hover:text-accent ${
-                    isActive("/about-us") ? "text-accent" : "text-[#12141D]"
-                  }`}
-                  onClick={() => setOpen(false)}
-                >
-                  About
-                </Link>
-              </li>
-            </ul>
-            <div className="mt-4">
-              <Link
-                href="/demo"
-                onClick={() => setOpen(false)}
-                className="inline-flex w-full items-center justify-center font-manrope font-medium text-sm bg-accent text-white px-5 py-3 rounded-[8px] hover:!text-white"
-              >
-                Request Demo
-              </Link>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </nav>
+        )}
+      </nav>
+    </div>
   );
 };
 

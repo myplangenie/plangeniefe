@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export const Listings = () => {
   return (
-    <section className="px-5 sm:px-10 md:px-20 mx-auto w-full mt-10 sm:mt-24">
+    <section className="px-5 sm:px-10 md:px-20 max-w-[1800px] mx-auto w-full mt-10 sm:mt-24">
       <div className="text-center">
         <h2 className="text-xl sm:text-4xl font-bold text-gray-900">
           Choose Your Path
@@ -22,7 +22,7 @@ export const Listings = () => {
             </p>
           </div>
           <div className="md:text-right">
-            <Link className="flex items-center gap-2 font-semibold" href="">
+            <Link className="flex items-center gap-2 font-semibold" href="/demo">
               Explore Prime <FaArrowRightLong />
             </Link>
           </div>
@@ -35,7 +35,7 @@ export const Listings = () => {
             </p>
           </div>
           <div className="md:text-right">
-            <Link className="flex items-center gap-2 font-semibold" href="">
+            <Link className="flex items-center gap-2 font-semibold" href="/demo">
               Book Demo + Toolkit <FaArrowRightLong />
             </Link>
           </div>
@@ -49,7 +49,7 @@ export const Listings = () => {
             </p>
           </div>
           <div className="md:text-right">
-            <Link className="flex items-center gap-2 font-semibold" href="">
+            <Link className="flex items-center gap-2 font-semibold" href="/demo">
               See Mission Planner <FaArrowRightLong />
             </Link>
           </div>
@@ -62,7 +62,7 @@ export const Listings = () => {
             </p>
           </div>
           <div className="md:text-right">
-            <Link className="flex items-center gap-2 font-semibold" href="">
+            <Link className="flex items-center gap-2 font-semibold" href="/demo">
               Apply for Licensing <FaArrowRightLong />
             </Link>
           </div>
@@ -76,7 +76,7 @@ export const Listings = () => {
             </p>
           </div>
           <div className="md:text-right">
-            <Link className="flex items-center gap-2 font-semibold" href="">
+            <Link className="flex items-center gap-2 font-semibold" href="/demo">
               See Mission Planner <FaArrowRightLong />
             </Link>
           </div>

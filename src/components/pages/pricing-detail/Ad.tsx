@@ -9,7 +9,8 @@ import EnterpriseImg from "../home/EnhanceImg";
 
 export default function Ad() {
   return (
-    <div className="bg-[#F3F8FF] py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-20">
+    <div className="bg-[#F3F8FF]">
+    <div className="max-w-[1800px] mx-auto py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-20">
       <div>
         <Image
           src={AdImg}
@@ -66,6 +67,7 @@ export default function Ad() {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }

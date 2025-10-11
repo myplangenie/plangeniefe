@@ -18,7 +18,7 @@ export default function TopDownloads() {
     // },
   ];
   return (
-    <section className="max-w-[1400px] mx-auto px-5 sm:px-10 md:px-20 py-20 font-manrope">
+    <section className="max-w-[1400px] mx-auto px-5 sm:px-10 pt-20 md:px-20 md:py-20 font-manrope">
       <h2 className="text-2xl md:text-3xl mb-5 font-semibold text-[#12141D]">Top Downloadables</h2>
       <p className="text-sm md:text-base opacity-70 mt-1">Here&apos;s what we&apos;ve been up to recently.</p>
       <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
