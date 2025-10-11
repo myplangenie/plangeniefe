@@ -48,24 +48,24 @@ export default function OurFounders() {
               src={MckinsleyImg}
               alt="Mckinsley"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-auto h-[2rem] md:h-[4rem]"
             />
             <Image
               src={MicrosoftImg}
               alt="Microsoft"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-auto h-[3rem] md:h-[5rem]"
             />
             <Image
               src={TecImg}
               alt="Tec"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-auto h-[3rem] md:h-[5rem]"
             />
           </div>

@@ -72,8 +72,8 @@ export default function AboutStory() {
               src={Thumb}
               alt="thumb"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-[40px] h-[35px] object-cover object-center mb-10"
             />
             <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
@@ -88,8 +88,8 @@ export default function AboutStory() {
               src={Ticket}
               alt="thumb"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-[40px] h-[35px] object-cover object-center mb-10"
             />
             <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
@@ -104,8 +104,8 @@ export default function AboutStory() {
               src={Percent}
               alt="thumb"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-[40px] h-[35px] object-cover object-center mb-10"
             />
             <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">
@@ -120,8 +120,8 @@ export default function AboutStory() {
               src={Doc}
               alt="thumb"
               quality={100}
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               className="w-[40px] h-[35px] object-cover object-center mb-10"
             />
             <h3 className="text-xl md:text-2xl font-extrabold font-manrope text-[#1D2130] mb-3 leading-tight">

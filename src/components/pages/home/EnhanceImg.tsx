@@ -53,6 +53,8 @@ export default function EnterpriseImg() {
             src={FrameImg}
             alt="thumb"
             quality={100}
+            width={1000}
+            height={1000}
             sizes="(max-width: 768px) 100vw, 50vw"
             className="w-full h-auto"
           />
@@ -67,6 +69,8 @@ export default function EnterpriseImg() {
             src={InvoiceImg}
             alt="invoice"
             quality={100}
+            width={1000}
+            height={1000}
             sizes="(max-width: 768px) 80vw, 30vw"
             className="w-full h-auto"
           />

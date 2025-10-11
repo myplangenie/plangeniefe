@@ -32,8 +32,8 @@ const FeatureCard = ({
       <Image
         src={img}
         alt=""
-        width={100}
-        height={100}
+        width={1000}
+        height={1000}
         className="mb-6 w-[43px] h-auto"
       />
       <h4 className="text-base font-bold mb-2 text-[#050506]">{title}</h4>
@@ -43,8 +43,8 @@ const FeatureCard = ({
       <Image
         src={GraphicImg}
         alt=""
-        width={100}
-        height={100}
+        width={1000}
+        height={1000}
         className="mx-auto w-full h-full object-cover object-center"
       />
     </div>
@@ -82,8 +82,8 @@ const WelcomePage = () => {
                       <Image
                         src={WelcomeIcon}
                         alt=""
-                        width={100}
-                        height={100}
+                        width={1000}
+                        height={1000}
                         className="mx-auto mb-3 w-[43px] h-auto"
                       />
                       <h3 className="text-base font-black text-[#050506] mb-1">
@@ -100,8 +100,8 @@ const WelcomePage = () => {
                         <Image
                           src={NotebookIcon}
                           alt=""
-                          width={100}
-                          height={100}
+                          width={1000}
+                          height={1000}
                           className="mx-auto w-[25px] h-auto"
                         />
                       </Button>
@@ -111,8 +111,8 @@ const WelcomePage = () => {
                     <Image
                       src={GraphicImg}
                       alt=""
-                      width={100}
-                      height={100}
+                      width={1000}
+                      height={1000}
                       className="mx-auto w-full h-full object-cover object-center"
                     />
                   </div>

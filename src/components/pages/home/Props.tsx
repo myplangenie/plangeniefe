@@ -40,8 +40,8 @@ export default function Props() {
                   src={SMEImg}
                   alt="thumb"
                   quality={100}
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className="w-[60px] h-auto"
                 />
               </div>
@@ -61,8 +61,8 @@ export default function Props() {
                   src={StartupImg}
                   alt="startup founders"
                   quality={100}
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className="w-[60px] h-auto"
                 />
               </div>
@@ -82,8 +82,8 @@ export default function Props() {
                   src={ConsultantImg}
                   alt="Social Purpose Organizations"
                   quality={100}
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className="w-[30px] h-auto"
                 />
               </div>
@@ -103,8 +103,8 @@ export default function Props() {
                   src={FlowerImg}
                   alt="Consultants & Coaches"
                   quality={100}
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className="w-[65px] h-auto"
                 />
               </div>
@@ -124,8 +124,8 @@ export default function Props() {
                   src={OrganizationImg}
                   alt="thumb"
                   quality={100}
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className="w-[65px] h-auto"
                 />
               </div>
@@ -145,8 +145,8 @@ export default function Props() {
                   src={SMEImg}
                   alt="thumb"
                   quality={100}
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className="w-[65px] h-auto"
                 />
               </div>

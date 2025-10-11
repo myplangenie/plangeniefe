@@ -13,6 +13,10 @@ import _2Img from "@/images/hero/_2.svg";
 import _3Img from "@/images/hero/_3.svg";
 import _4Img from "@/images/hero/_4.svg";
 
+import MainHeroImg from "@/images/hero/main.png";
+
+import FrameImg from "@/images/frame.svg";
+
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -27,6 +31,7 @@ import CurveImg from "@/images/hero/curve-sec.svg";
 
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomeHero() {
   const scope = useRef<HTMLDivElement | null>(null);
@@ -57,11 +62,11 @@ export default function HomeHero() {
 
   return (
     <header
-      className="relative hero-bg pt-32 sm:pt-40 md:pt-52 pb-40 sm:pb-20 md:pb-24 text-white"
+      className="relative hero-bg pt-32 sm:pt-40 md:pt-52 pb-20 sm:pb-20 md:pb-24 text-white"
       ref={scope}
     >
-      <div className="max-w-[1800px] mx-auto flex flex-col md:grid md:grid-cols-[1.2fr_1fr] items-center gap-28 md:gap-14 px-5 sm:px-10 md:px-20">
-        <div className="flex flex-col gap-2 md:gap-4">
+      <div className="max-w-[1800px] mx-auto flex flex-col md:grid md:grid-cols-[1.2fr_1fr] items-center gap-10 md:gap-14 px-0 md:px-20">
+        <div className="flex flex-col gap-2 md:gap-4 px-5 md:px-0">
           <ul className="hidden text-xs sm:text-sm opacity-80 mb-5 md:flex gap-4 flex-wrap">
             <li className="flex items-center font-manrope font-bold text-sm gap-2">
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
@@ -126,7 +131,17 @@ export default function HomeHero() {
           </div>
         </div>
         <div className="relative">
-          <div className="order-first grid grid-cols-4 md:order-none image-box z-30 relative">
+          <div className="block md:hidden">
+            <Image
+              src={MainHeroImg}
+              alt="alt main"
+              width={1000}
+              quality={100}
+              height={1000}
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+          <div className="order-first hidden md:grid grid-cols-4 md:order-none image-box z-30 relative">
             <div className="relative hero-card">
               <img
                 src={_1Img.src}
@@ -184,7 +199,7 @@ export default function HomeHero() {
               </div>
             </div>
           </div>
-          <div className="w-full absolute inset-0 -top-20 z-10 hero-deco">
+          <div className="w-full hidden md:block absolute inset-0 -top-20 z-10 hero-deco">
             <img
               src={CurveImg.src}
               alt="alt main"

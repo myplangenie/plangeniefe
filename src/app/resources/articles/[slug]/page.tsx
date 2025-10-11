@@ -3,6 +3,8 @@ import Link from "next/link";
 import DisplayLayout from "@/components/layout/displayLayout";
 import { getArticles } from "@/content/articles";
 import Image from "next/image";
+import JsonLd from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -41,6 +43,29 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <DisplayLayout>
       <>
+        {/* Article JSON-LD */}
+        {article && (
+          <JsonLd
+            id="ld-article"
+            data={{
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              headline: article.title,
+              datePublished: article.date || undefined,
+              author: article.author ? { '@type': 'Person', name: article.author } : undefined,
+              mainEntityOfPage: `${siteConfig.url}/resources/articles/${article.slug}`,
+              image: article.cover ? `${siteConfig.url}${article.cover}` : undefined,
+              publisher: {
+                '@type': 'Organization',
+                name: siteConfig.name,
+                logo: {
+                  '@type': 'ImageObject',
+                  url: `${siteConfig.url}/images/favicon/android-chrome-192x192.png`,
+                },
+              },
+            }}
+          />
+        )}
         <header className="bg-primary pt-48 pb-28 text-white">
           <div className="md:max-w-7xl mx-auto">
             <div className="flex flex-col items-center text-center gap-4">
@@ -71,6 +96,8 @@ export default async function ArticlePage({ params }: Props) {
               src={(article.cover ? (article.cover as any) : "/blog/relationship.jpg") as any}
               alt={article.title}
               sizes="(max-width: 768px) 100vw, 768px"
+              width={1000}
+              height={1000}
               className="w-full h-auto rounded-xl shadow-lg ring-1 ring-black/10"
               priority
             />

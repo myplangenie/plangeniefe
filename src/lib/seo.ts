@@ -10,5 +10,11 @@ export const siteConfig = {
     site: "@plangenie",
     creator: "@plangenie",
   },
+  sameAs: [
+    "https://x.com/myplangenie",
+    "https://www.instagram.com/myplangenie/",
+    "https://www.facebook.com/myplangenie",
+    "https://www.tiktok.com/@myplangenie",
+    "https://www.linkedin.com/company/plan-genie/",
+  ],
 };
-

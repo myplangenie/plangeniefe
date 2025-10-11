@@ -15,8 +15,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import DisplayLayout from "@/components/layout/displayLayout";
 
+import MainHeroImg from "@/images/hero/main.png";
+
 import { FaCheck } from "react-icons/fa6";
+import type { Metadata } from "next";
 import HeroImage from "@/components/pages/home/HeroImage";
+import Image from "next/image";
 
 const RequestDemo = () => {
   const schema = useMemo(
@@ -63,6 +67,8 @@ const RequestDemo = () => {
 
   return (
     <DisplayLayout>
+      {/* SEO metadata for Demo page */}
+      {/* Next also reads static metadata below. */}
       <section className="relative hero-bg [#F4F7F2] pt-28 pb-24 px-5 md:px-0">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-12 items-center">
@@ -72,8 +78,20 @@ const RequestDemo = () => {
                 Get a Free 30-Minute
                 <br /> Personalized Demo
               </h1>
-              <div className="mt-20">
-                <HeroImage variant="compact" />
+              <div className="mt-10 md:mt-20">
+                <div className="block md:hidden">
+                  <Image
+                    src={MainHeroImg}
+                    alt="alt main"
+                    width={1000}
+                    quality={100}
+                    height={1000}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+                <div className="hidden md:block">
+                  <HeroImage variant="compact" />
+                </div>
               </div>
               <p className="mt-4 text-sm md:text-lg text-white font-manrope max-w-xl leading-loose md:mb-5">
                 Get a guided tour with our experts to explore the
@@ -298,3 +316,16 @@ const RequestDemo = () => {
 };
 
 export default RequestDemo;
+
+export const metadata: Metadata = {
+  title: "Request a Demo — See Plan Genie in action",
+  description:
+    "Book a free 30‑minute demo of Plan Genie. Explore AI planning, built‑in training, and execution tracking tailored to your needs.",
+  alternates: { canonical: "/demo" },
+  openGraph: {
+    title: "Request a Demo — Plan Genie",
+    description:
+      "Get a guided tour of Plan Genie and see how it turns strategy into execution.",
+    images: [{ url: "/images/hero.svg", width: 1200, height: 630 }],
+  },
+};

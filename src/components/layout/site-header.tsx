@@ -23,8 +23,8 @@ export default function SiteHeader() {
             <Image
               src={LogoImg}
               alt="Plangenie"
-              width={140}
-              height={36}
+              width={1000}
+              height={1000}
               className="h-6 w-auto"
               priority
             />
@@ -50,4 +50,3 @@ export default function SiteHeader() {
     </header>
   );
 }
-

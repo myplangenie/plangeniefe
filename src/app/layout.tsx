@@ -97,7 +97,23 @@ export default function RootLayout({
             '@type': 'Organization',
             name: siteConfig.name,
             url: siteConfig.url,
-            logo: `${siteConfig.url}/favicon.ico`,
+            logo: `${siteConfig.url}/images/favicon/android-chrome-192x192.png`,
+            sameAs: siteConfig.sameAs,
+          })}
+        </Script>
+        <Script id="ld-software" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: siteConfig.name,
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            url: siteConfig.url,
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
           })}
         </Script>
         <Script id="ld-website" type="application/ld+json" strategy="afterInteractive">

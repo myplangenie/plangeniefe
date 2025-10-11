@@ -28,6 +28,8 @@ export default async function ArticlesIndex() {
                 src={(a.cover ? (a.cover as any) : CoverImg) as any}
                 alt={a.title}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                width={1000}
+                height={1000}
                 className="w-full h-48 object-cover"
               />
               <div className="p-5">

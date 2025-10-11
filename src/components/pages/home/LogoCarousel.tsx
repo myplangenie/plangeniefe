@@ -85,6 +85,8 @@ export default function LogoCarousel() {
                 <Image
                   src={item.src}
                   alt={item.alt}
+                  width={1000}
+                  height={1000}
                   className="h-6 md:h-9 w-auto object-contain"
                 />
               </li>

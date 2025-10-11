@@ -44,7 +44,7 @@ export default function BuiltFor() {
             },
           ].map((b, i) => (
             <div key={i} className="rounded-[8px] bg-[#FAFAFA] p-5 py-8">
-              <Image alt={b.title} src={b.img} width={100} quality={100} height={100} className="w-[70px] h-auto mx-auto mb-6" />
+              <Image alt={b.title} src={b.img} width={1000} quality={100} height={1000} className="w-[70px] h-auto mx-auto mb-6" />
               <h3 className="font-manrope font-extrabold text-[17px] text-[#12141D] mb-3">{b.title}</h3>
               <p className="text-sm text-[#1a1a1a]/80 leading-relaxed font-manrope font-medium">{b.text}</p>
             </div>

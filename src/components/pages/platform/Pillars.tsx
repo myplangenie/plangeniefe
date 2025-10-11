@@ -58,8 +58,8 @@ const PlatformPillars = () => {
                 <Image
                   src={pillar.img}
                   alt={pillar.title}
-                  width={0}
-                  height={0}
+                  width={1000}
+                  height={1000}
                   className="w-[53px] h-auto block mb-6 sm:mb-10"
                 />
                 <h3 className="text-base font-space-grotesk font-bold mb-3">
