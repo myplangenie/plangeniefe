@@ -19,7 +19,7 @@ type Plan = {
 const plans: Plan[] = [
   {
     name: "Lite",
-    description: "White-label partners and large organizations",
+    description: "Best for idea-stage entrepreneurs and first-time planners starting their journey with clarity",
     priceMonthly: 0,
     cta: "Get Started",
     bullets: [
@@ -30,7 +30,7 @@ const plans: Plan[] = [
   },
   {
     name: "Pro",
-    description: "White-label partners and large organizations",
+    description: "Best for entrepreneurs and startups getting started with structured planning",
     priceMonthly: 10,
     cta: "Get Started",
     bullets: [
@@ -42,7 +42,7 @@ const plans: Plan[] = [
   },
   {
     name: "Prime",
-    description: "Best for coaches, solo consultants, and growing businesses",
+    description: "Best for teams and organizations ready to scale with full strategic visibility",
     priceMonthly: 15,
     featured: true,
     cta: "Get Started",
@@ -58,7 +58,7 @@ const plans: Plan[] = [
   },
   {
     name: "Enterprise",
-    description: "White-label partners and large organizations",
+    description: "Best for large organizations needing custom AI solutions and integrated workflow",
     priceMonthly: 0,
     cta: "Contact Sales",
     bullets: [
@@ -70,8 +70,8 @@ const plans: Plan[] = [
   },
   {
     name: "Life",
-    description: "White-label partners and large organizations",
-    priceMonthly: 0,
+    description: "Best for individuals and professionals designing purposeful personal plans",
+    priceMonthly: 5,
     cta: "Contact Sales",
     bullets: [
       "Security reviews & SSO",
