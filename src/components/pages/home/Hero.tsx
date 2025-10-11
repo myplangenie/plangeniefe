@@ -100,7 +100,7 @@ export default function HomeHero() {
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
                 <FaCheck className="text-[10px] text-accent" />
               </div>{" "}
-              Plans built in minutes, not weeks
+              Actionable plans built in minutes
             </li>
             <li className="flex items-center font-manrope font-bold text-sm gap-2">
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
@@ -112,7 +112,7 @@ export default function HomeHero() {
               <div className="rounded-full size-[18px] bg-[#5B6364] flex items-center justify-center">
                 <FaCheck className="text-[10px] text-accent" />
               </div>{" "}
-              Trusted by top business coaches
+              Trusted by top business leaders
             </li>
           </ul>
           <div className="flex gap-2 items-center flex-wrap">

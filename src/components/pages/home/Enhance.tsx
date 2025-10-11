@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import AdImg from "@/images/ad.svg";
 import FrameImg from "@/images/frame.svg";
+import EnhanceMobileImg from "@/images/hero/enhance.png";
 import InvoiceImg from "@/images/invoice.svg";
 
 import { IoIosArrowUp } from "react-icons/io";
@@ -66,7 +67,18 @@ export default function Enhance() {
         ref={rootRef}
         className="max-w-[1800px] mx-auto py-14 sm:py-20 px-5 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 mt-16 md:mt-24 items-center"
       >
-        <div className="relative">
+        <div className="block md:hidden">
+          <Image
+            src={EnhanceMobileImg}
+            alt="invoice"
+            quality={100}
+            width={1000}
+            height={1000}
+            sizes="(max-width: 768px) 80vw, 30vw"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="relative hidden md:block">
           <div
             style={{ willChange: "transform, opacity" }}
             className={`transition-all duration-700 ease-out ${

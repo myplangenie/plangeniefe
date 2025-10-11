@@ -72,7 +72,7 @@ export default function LogoCarousel() {
         <div className="text-center mb-8 md:mb-10">
           <h2 className="font-manrope font-extrabold text-lg sm:text-xl md:text-2xl text-[#1E2C22] md:w-[60%] mx-auto leading-relaxed">
             {/* Powering a global community of changemakers and innovators. */}
-            Our clients span founders, SMEs, nonprofits, and institutions using Plan Genie to bring their vision to life.
+            Our clients span founders, SMEs, nonprofits, and institutions using Plan Genie to bring their visions to life.
           </h2>
           {/* <p className="mt-3 text-[#1a1a1a]/80 max-w-3xl mx-auto">
             Our clients span founders, SMEs, nonprofits, and institutions using Plan Genie to bring their vision to life.
