@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -59,10 +59,23 @@ const RequestDemo = () => {
   });
 
   const onSubmit = (data: any) => {
-    // For now we just log; integration can be added later.
-    // eslint-disable-next-line no-console
-    console.log("Request Demo submitted", data);
+    setSubmitting(true);
+    setMessage("");
+    fetch("/api/request-demo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then(async (res) => {
+        if (!res.ok) throw new Error((await res.json()).error || "Failed");
+        setMessage("Thank you! We\'ll be in touch shortly.");
+      })
+      .catch((err) => setMessage(err.message || "Something went wrong."))
+      .finally(() => setSubmitting(false));
   };
+
+  const [submitting, setSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
 
   return (
     <DisplayLayout>
@@ -298,11 +311,15 @@ const RequestDemo = () => {
                     </label>
                   </div> */}
 
+                  {message && (
+                    <p className="text-sm mb-3 text-green-700">{message}</p>
+                  )}
                   <Button
                     type="submit"
-                    className="w-full h-12 rounded-xl bg-primary text-white hover:bg-primary/90"
+                    disabled={submitting}
+                    className="w-full h-12 rounded-xl bg-primary text-white hover:bg-primary/90 disabled:opacity-60"
                   >
-                    Request Demo
+                    {submitting ? "Sending…" : "Request Demo"}
                   </Button>
                 </form>
               </div>
