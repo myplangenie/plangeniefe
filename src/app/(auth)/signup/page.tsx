@@ -3,7 +3,7 @@
 import { useForm, Controller } from "react-hook-form";
 import { Divider } from "antd";
 
-import LogoAlt from "@/images/logo_alt.png";
+import LogoAlt from "@/images/logo.png";
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";

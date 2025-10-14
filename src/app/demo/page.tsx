@@ -20,6 +20,7 @@ import MainHeroImg from "@/images/hero/main.png";
 import { FaCheck } from "react-icons/fa6";
 import HeroImage from "@/components/pages/home/HeroImage";
 import Image from "next/image";
+import LogoCarousel from "@/components/pages/home/LogoCarousel";
 
 const RequestDemo = () => {
   const schema = useMemo(
@@ -68,7 +69,7 @@ const RequestDemo = () => {
     })
       .then(async (res) => {
         if (!res.ok) throw new Error((await res.json()).error || "Failed");
-        setMessage("Thank you! We\'ll be in touch shortly.");
+        setMessage("Thank you! We'll be in touch shortly.");
       })
       .catch((err) => setMessage(err.message || "Something went wrong."))
       .finally(() => setSubmitting(false));
@@ -327,6 +328,7 @@ const RequestDemo = () => {
           </div>
         </div>
       </section>
+      <LogoCarousel />
     </DisplayLayout>
   );
 };

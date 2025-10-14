@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { FaXTwitter, FaInstagram, FaFacebook, FaTiktok, FaLinkedin } from "react-icons/fa6";
+import {
+  FaXTwitter,
+  FaInstagram,
+  FaFacebook,
+  FaTiktok,
+  FaLinkedin,
+} from "react-icons/fa6";
 
 interface FooterProps {
   title?: string;
@@ -18,7 +24,9 @@ const Footer = (props: FooterProps) => {
               {props?.title || "Start planning with intelligence, today."}
             </h2>
             <p className="text-base sm:text-lg text-center">
-              {props?.desc || "Build your next landing page fast & easy"}
+              {/* {props?.desc || "Turn insight into action and action into measurable growth with Plan Genie"} */}
+              Turn insight into action and action into measurable growth with
+              Plan Genie
             </p>
             <div className="flex items-center gap-3 justify-center mt-6 md:mt-10 flex-wrap">
               {props.page !== "resources" ? (

@@ -62,7 +62,7 @@ const plans: Plan[] = [
     priceMonthly: 0,
     cta: "Contact Sales",
     bullets: [
-      "Security reviews & SSO",
+      "Security reviews & Single Sign-On",
       "Custom training",
       "Dedicated success manager",
       "Flexible billing",
@@ -74,10 +74,10 @@ const plans: Plan[] = [
     priceMonthly: 5,
     cta: "Contact Sales",
     bullets: [
-      "Security reviews & SSO",
-      "Custom training",
-      "Dedicated success manager",
-      "Flexible billing",
+      "Guided prompts for life and career clarity",
+      "Personal goal and habit tracker",
+      "Vision and values reflection tools",
+      "⁠Progress insights and growth summaries",
     ],
   },
 ];

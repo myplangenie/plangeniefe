@@ -27,7 +27,7 @@ const Story = () => {
                 </p>
               </div>
             </div>
-            <p className="text-sm md:text-lg leading-loose font-medium">
+            <p className="text-sm md:text-lg leading-loose font-medium mb-4">
               Patrick Lo is the visionary founder and CEO of Trakking and Canaan
               Group, where he has led innovation in logistics and supply chain
               optimization for more than two decades. Renowned for his
