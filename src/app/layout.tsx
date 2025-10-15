@@ -3,6 +3,7 @@ import { Lato, Geist_Mono, Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/seo";
 import Script from "next/script";
+import ToasterClient from "@/components/ui/ToasterClient";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -130,6 +131,7 @@ export default function RootLayout({
           })}
         </Script>
         {children}
+        <ToasterClient />
       </body>
     </html>
   );

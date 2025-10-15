@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,20 +14,8 @@ export async function POST(req: NextRequest) {
     } = body || {};
 
     const to = process.env.TO_EMAIL || "chike@plangenie.com";
-    const from = process.env.FROM_EMAIL || process.env.SMTP_USER || "no-reply@plangenie.com";
-
-    // Create transporter from env
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : 587,
-      secure: process.env.SMTP_SECURE === "true" || false,
-      auth: process.env.SMTP_USER
-        ? {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS,
-          }
-        : undefined,
-    });
+    const from = process.env.RESEND_FROM || "Plan Genie <noreply@help.plangenie.com>";
+    const resend = new Resend(process.env.RESEND_KEY);
 
     const subject = `New Demo Request${offering ? ` – ${offering}` : ""}`;
     const html = `
@@ -42,7 +30,18 @@ export async function POST(req: NextRequest) {
     `;
     const text = `New Demo Request\n\nName: ${name || ""}\nEmail: ${email || ""}\nPhone: ${phone || ""}\nCompany: ${company || ""}\nOffering: ${offering || ""}\n\nRequirement:\n${requirement || ""}`;
 
-    await transporter.sendMail({ from, to, subject, html, text });
+    const result = await resend.emails.send({
+      from,
+      to,
+      subject,
+      html,
+      text,
+      // reply_to: email || undefined,
+    });
+
+    if ((result as any)?.error) {
+      throw new Error((result as any).error?.message || "Resend error");
+    }
 
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
@@ -56,4 +55,3 @@ export async function POST(req: NextRequest) {
     });
   }
 }
-

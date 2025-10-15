@@ -18,6 +18,7 @@ import DisplayLayout from "@/components/layout/displayLayout";
 import MainHeroImg from "@/images/hero/main.png";
 
 import { FaCheck } from "react-icons/fa6";
+import { toast } from "sonner";
 import HeroImage from "@/components/pages/home/HeroImage";
 import Image from "next/image";
 import LogoCarousel from "@/components/pages/home/LogoCarousel";
@@ -70,8 +71,16 @@ const RequestDemo = () => {
       .then(async (res) => {
         if (!res.ok) throw new Error((await res.json()).error || "Failed");
         setMessage("Thank you! We'll be in touch shortly.");
+        toast.success("Demo request sent successfully");
+        setTimeout(() => {
+          if (typeof window !== "undefined") window.location.reload();
+        }, 1500);
       })
-      .catch((err) => setMessage(err.message || "Something went wrong."))
+      .catch((err) => {
+        const msg = err?.message || "Something went wrong.";
+        setMessage(msg);
+        toast.error(msg);
+      })
       .finally(() => setSubmitting(false));
   };
 
