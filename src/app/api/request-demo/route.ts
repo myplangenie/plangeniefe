@@ -13,6 +13,7 @@ export async function POST(req: NextRequest) {
       offering,
     } = body || {};
 
+    
     const to = process.env.TO_EMAIL || "chike@plangenie.com";
     const from = process.env.RESEND_FROM || "Plan Genie <noreply@help.plangenie.com>";
     const resend = new Resend(process.env.RESEND_KEY);
